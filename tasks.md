@@ -14,7 +14,7 @@
 * [x] movy-list.component
  - [x] render a hardcoded list of movies
  - [x] move hardcoded list to api backend '/api/movies'
-* [ ] add a Movie resource
+* [x] add a Movie resource
  - replace $http call in movy-list with Movie call
 * [ ] add a Store service
  - initialize Store from within Store itself
