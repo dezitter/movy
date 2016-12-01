@@ -1,7 +1,10 @@
 const debug = require('debug')('movy');
-const app = require('./app');
+const dotenv = require('dotenv');
 
-const APP_PORT = 3000;
+dotenv.config();
+
+const app = require('./app');
+const APP_PORT = process.env.APP_PORT;
 
 app.listen(APP_PORT, () => {
     debug(`Listening on port ${APP_PORT}`);
