@@ -11,9 +11,13 @@
 * [x] setup watchify watcher
 * [x] refactor watch:js & build:js tasks
 * [x] use move HTML template to PUG using pugify browserify transform
-* [ ] movy-list.component
+* [x] movy-list.component
  - [x] render a hardcoded list of movies
- - [ ] move hardcoded list to api backend '/api/movies'
+ - [x] move hardcoded list to api backend '/api/movies'
+* [ ] add a Movie resource
+ - replace $http call in movy-list with Movie call
+* [ ] add a Store service
+ - initialize Store from within Store itself
 * [ ] create a movy-search.component
  - [ ] contains movy-search-form component
   - [ ] send text query to backend
@@ -32,3 +36,4 @@
 ## low priority
 
 * [ ] load .min scripts in 'production' environment
+* [ ] dump initial movie list in HTML to save request & round-trip
