@@ -22,7 +22,7 @@ Reload the server on changes:
 
 Re-bundle the JavaScript app on changes:
 
-    $ ./node_modules/watchify/bin/cmd.js -v -o ./dist/js/bundle.js app/public/index.js
+    $ gulp watch:js
 
 Reload browser on changes:
 

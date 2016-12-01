@@ -9,13 +9,14 @@
 * [x] setup angular app with browserify
 * [x] setup browser sync watcher
 * [x] setup watchify watcher
+* [ ] refactor watch:js & build:js tasks
 
 ## medium priority
 
 * [x] setup gulp
 * [x] add gulp-nodemon watcher
 * [x] add gulp build:js task
-* [ ] add gulp watchify watcher
+* [x] add gulp watchify watcher
 * [ ] add gulp browsersync watcher
 
 ## low priority
