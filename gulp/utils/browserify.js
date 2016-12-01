@@ -19,7 +19,7 @@ function onBundleError(error) {
     const message = gutil.colors.red(error.message);
 
     gutil.log(header, message);
-    gutil.log(error.stack);
+    gutil.log(error.stack || error);
 }
 
 module.exports = {
