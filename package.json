@@ -1,0 +1,19 @@
+{
+  "name": "movy",
+  "version": "1.0.0",
+  "description": "A simple web-based movie manager.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dezitter/movy.git"
+  },
+  "author": "Laurent Dezitter <laurent.dezitter@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dezitter/movy/issues"
+  },
+  "homepage": "https://github.com/dezitter/movy#readme"
+}
