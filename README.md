@@ -12,4 +12,4 @@ A simple web-based movie manager.
 ## Run
 
     $ cd movy/
-    $ node index.js
+    $ npm run start
