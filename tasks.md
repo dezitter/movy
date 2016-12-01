@@ -14,8 +14,9 @@
 
 * [x] setup gulp
 * [x] add gulp-nodemon watcher
-* [ ] add gulp browsersync watcher
+* [ ] add gulp build:js task
 * [ ] add gulp watchify watcher
+* [ ] add gulp browsersync watcher
 
 ## low priority
 
