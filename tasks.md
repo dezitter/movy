@@ -10,15 +10,16 @@
 * [x] setup browser sync watcher
 * [x] setup watchify watcher
 * [x] refactor watch:js & build:js tasks
+* [ ] use move HTML template to PUG using pugify browserify transform
 * [ ] movy-list.component
- - render a hardcoded list of movies
- - move hardcoded list to api backend '/api/movies'
+ - [x] render a hardcoded list of movies
+ - [ ] move hardcoded list to api backend '/api/movies'
 * [ ] create a movy-search.component
- - contains movy-search-form component
-  - send text query to backend
-  - return hardcoded response
- - movy-search-result component
-  - render results
+ - [ ] contains movy-search-form component
+  - [ ] send text query to backend
+  - [ ] return hardcoded response
+ - [ ] movy-search-result component
+  - [ ] render results
 
 ## medium priority
 
