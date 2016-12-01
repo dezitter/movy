@@ -1,3 +1,5 @@
+const template = require('./movy-list.template.pug');
+
 function MovyListController() {
     const vm = this;
 
@@ -12,5 +14,5 @@ module.exports = {
     controller: [
         MovyListController
     ],
-    templateUrl: '/js/movy-list/movy-list.template.html'
+    template: template()
 };

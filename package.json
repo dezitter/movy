@@ -30,12 +30,14 @@
     "browserify-shim": "^3.8.12",
     "gulp-util": "^3.0.7",
     "nodemon": "^1.11.0",
+    "pugify": "^2.1.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.7.0"
   },
   "browserify": {
     "transform": [
-      "browserify-shim"
+      "browserify-shim",
+      "pugify"
     ]
   },
   "browserify-shim": {

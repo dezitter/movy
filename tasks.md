@@ -10,7 +10,7 @@
 * [x] setup browser sync watcher
 * [x] setup watchify watcher
 * [x] refactor watch:js & build:js tasks
-* [ ] use move HTML template to PUG using pugify browserify transform
+* [x] use move HTML template to PUG using pugify browserify transform
 * [ ] movy-list.component
  - [x] render a hardcoded list of movies
  - [ ] move hardcoded list to api backend '/api/movies'
