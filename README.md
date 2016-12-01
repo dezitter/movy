@@ -18,7 +18,7 @@ A simple web-based movie manager.
 
 Reload the server on changes:
 
-    $ DEBUG=movy nodemon index.js
+    $ DEBUG=movy gulp watch:server
 
 Re-bundle the JavaScript app on changes:
 

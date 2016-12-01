@@ -3,7 +3,9 @@
     "ignore": [
         "**/*.md",
         "**/*.pug",
+        "gulpfile.js",
         "dist/",
+        "gulp/",
         "public/"
     ],
     "events": {

@@ -12,8 +12,8 @@
 
 ## medium priority
 
-* [ ] setup gulp
-* [ ] add gulp-nodemon watcher
+* [x] setup gulp
+* [x] add gulp-nodemon watcher
 * [ ] add gulp browsersync watcher
 * [ ] add gulp watchify watcher
 
