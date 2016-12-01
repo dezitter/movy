@@ -1,23 +1,14 @@
 const template = require('./movy-list.template.pug');
 
-function MovyListController(Movie) {
+function MovyListController(Store) {
     const vm = this;
 
-    activate();
-
-    function activate() {
-        fetchMovies()
-            .then(movies => vm.movies = movies);
-    }
-
-    function fetchMovies() {
-        return Movie.query().$promise;
-    }
+    vm.store = Store;
 }
 
 module.exports = {
     controller: [
-        'Movie',
+        'Store',
         MovyListController
     ],
     template: template()

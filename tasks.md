@@ -16,7 +16,7 @@
  - [x] move hardcoded list to api backend '/api/movies'
 * [x] add a Movie resource
  - replace $http call in movy-list with Movie call
-* [ ] add a Store service
+* [x] add a Store service
  - initialize Store from within Store itself
 * [ ] create a movy-search.component
  - [ ] contains movy-search-form component
