@@ -4,7 +4,7 @@ const gutil = require('gulp-util');
 const source = require('vinyl-source-stream');
 
 function createBundle(options) {
-    return browserify('./app/public/index.js', options);
+    return browserify('./app/public/js/index.js', options);
 }
 
 function writeBundle(b) {
