@@ -7,7 +7,7 @@
 * [x] update README#run instructions
 * [x] setup nodemon
 * [x] setup angular app with browserify
-* [ ] setup browser sync watcher
+* [x] setup browser sync watcher
 * [x] setup watchify watcher
 
 ## medium priority

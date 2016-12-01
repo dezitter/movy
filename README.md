@@ -23,3 +23,7 @@ Reload the server on changes:
 Re-bundle the JavaScript app on changes:
 
     $ ./node_modules/watchify/bin/cmd.js -v -o ./dist/js/bundle.js app/public/index.js
+
+Reload browser on changes:
+
+    $ ./node_modules/browser-sync/bin/browser-sync.js start -c bs-config.js

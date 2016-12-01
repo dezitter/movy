@@ -25,6 +25,7 @@
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.2",
     "browserify": "^13.1.1",
     "browserify-shim": "^3.8.12",
     "nodemon": "^1.11.0",
