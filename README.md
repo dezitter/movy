@@ -24,6 +24,6 @@ Re-bundle the JavaScript app on changes:
 
     $ gulp watch:js
 
-Reload browser on changes:
+Reload browser on bundle/template changes:
 
-    $ ./node_modules/browser-sync/bin/browser-sync.js start -c bs-config.js
+    $ gulp watch:front
