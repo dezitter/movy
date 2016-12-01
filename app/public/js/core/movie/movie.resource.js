@@ -1,5 +1,12 @@
 function MovieFactory($resource) {
-    return $resource('/api/movies');
+    const baseUrl = '/api/movies';
+
+    return $resource(baseUrl, null, {
+        search: {
+            isArray: true,
+            url: `${baseUrl}/search`
+        }
+    });
 }
 
 module.exports = [

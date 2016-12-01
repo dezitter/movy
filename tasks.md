@@ -19,9 +19,9 @@
 * [x] add a Store service
  - initialize Store from within Store itself
 * [ ] create a movy-search.component
- - [ ] contains movy-search-form component
-  - [ ] send text query to backend
-  - [ ] return hardcoded response
+ - [x] contains movy-search-form component
+  - [x] send text query to backend
+  - [x] return hardcoded response
  - [ ] movy-search-result component
   - [ ] render results
 

@@ -10,5 +10,14 @@ router.get('/movies', (req, res) => {
        ]);
 });
 
+router.get('/movies/search', (req, res) => {
+    res.type('json')
+       .send([
+            { title: 'foo' },
+            { title: 'bar' },
+            { title: 'quz' }
+       ]);
+});
+
 module.exports = router;
 
