@@ -1,0 +1,10 @@
+{
+    "verbose": true,
+    "ignore": [
+        "**/*.md",
+        "**/*.pug"
+    ],
+    "events": {
+        "restart": "notify-send \"Server restarted\" \"File changed: $FILENAME\""
+    }
+}

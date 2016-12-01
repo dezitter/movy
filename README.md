@@ -13,3 +13,9 @@ A simple web-based movie manager.
 
     $ cd movy/
     $ npm run start
+
+## Development workflow
+
+Reload the server on changes:
+
+    $ DEBUG=movy nodemon index.js
