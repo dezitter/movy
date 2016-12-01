@@ -1,8 +1,9 @@
-const browserify = require('browserify');
 const gulp = require('gulp');
 const gutil = require('gulp-util');
-const source = require('vinyl-source-stream');
 const watchify = require('watchify');
+
+const createBundle = require('../../utils/browserify').createBundle;
+const writeBundle = require('../../utils/browserify').writeBundle;
 
 gulp.task('watch:js', () => {
     const b = createBundle({
@@ -12,26 +13,7 @@ gulp.task('watch:js', () => {
     });
 
     b.on('update', () => writeBundle(b));
-    b.on('log',    (msg) => gutil.log(msg));
+    b.on('log', (msg) => gutil.log(msg));
 
-    writeBundle(b);
-
-    function createBundle(options) {
-        return browserify('./app/public/index.js', options);
-    }
-
-    function writeBundle(b) {
-        return b.bundle()
-            .on('error', onBundleError)
-            .pipe(source('bundle.js'))
-            .pipe(gulp.dest('./dist/js'));
-    }
-
-    function onBundleError(error) {
-        const header = gutil.colors.red.bold('Browserify:');
-        const message = gutil.colors.red(error.message);
-
-        gutil.log(header, message);
-        gutil.log(error.stack);
-    }
+    return writeBundle(b);
 });

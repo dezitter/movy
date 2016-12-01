@@ -9,7 +9,7 @@
 * [x] setup angular app with browserify
 * [x] setup browser sync watcher
 * [x] setup watchify watcher
-* [ ] refactor watch:js & build:js tasks
+* [x] refactor watch:js & build:js tasks
 
 ## medium priority
 
