@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/dezitter/movy/issues"
   },
-  "homepage": "https://github.com/dezitter/movy#readme"
+  "homepage": "https://github.com/dezitter/movy#readme",
+  "dependencies": {
+    "debug": "^2.3.3",
+    "express": "^4.14.0",
+    "pug": "^2.0.0-beta6"
+  }
 }
