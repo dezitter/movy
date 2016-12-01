@@ -6,7 +6,7 @@
 * [x] add npm run start script
 * [x] update README#run instructions
 * [x] setup nodemon
-* [ ] setup angular app with browserify
+* [x] setup angular app with browserify
 * [ ] setup browser sync watcher
 * [ ] setup browserify watcher
 
@@ -16,3 +16,7 @@
 * [ ] add gulp-nodemon watcher
 * [ ] add browsersync watcher via gulp
 * [ ] add browserify watcher
+
+## low priority
+
+* [ ] load .min scripts in 'production' environment

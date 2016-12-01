@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app="movyApp")
   head
     meta(charset="utf-8")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
@@ -7,4 +7,7 @@ html
     meta(name="description" content="")
     meta(name="viewport" content="width=device-width, initial-scale=1")
   body
-    p= "Hello"
+    | {{ 'hello' + ' world' }}
+
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js")
+    script(type="text/javascript" src="/js/bundle.js")

@@ -4,7 +4,8 @@
   "description": "A simple web-based movie manager.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run build && node index.js",
+    "build": "mkdir -p dist/js; browserify -o ./dist/js/bundle.js app/public/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +25,16 @@
     "pug": "^2.0.0-beta6"
   },
   "devDependencies": {
+    "browserify": "^13.1.1",
+    "browserify-shim": "^3.8.12",
     "nodemon": "^1.11.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "angular": "global:angular"
   }
 }
