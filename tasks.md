@@ -8,14 +8,14 @@
 * [x] setup nodemon
 * [x] setup angular app with browserify
 * [ ] setup browser sync watcher
-* [ ] setup browserify watcher
+* [x] setup watchify watcher
 
 ## medium priority
 
 * [ ] setup gulp
 * [ ] add gulp-nodemon watcher
-* [ ] add browsersync watcher via gulp
-* [ ] add browserify watcher
+* [ ] add gulp browsersync watcher
+* [ ] add gulp watchify watcher
 
 ## low priority
 

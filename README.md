@@ -19,3 +19,7 @@ A simple web-based movie manager.
 Reload the server on changes:
 
     $ DEBUG=movy nodemon index.js
+
+Re-bundle the JavaScript app on changes:
+
+    $ ./node_modules/watchify/bin/cmd.js -v -o ./dist/js/bundle.js app/public/index.js
