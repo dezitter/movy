@@ -10,7 +10,7 @@
 - [x] insert new movie in data store
 - [x] retrieve list of movie from data store
 
-- [ ] remove useless .type('json'), express will handle it itself (http://expressjs.com/en/4x/api.html#res.send)
+- [x] remove useless .type('json'), express will handle it itself (http://expressjs.com/en/4x/api.html#res.send)
 
 - [ ] add a 'x' button to remove movies from store
 - [x] show posters in movie list

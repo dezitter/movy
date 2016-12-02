@@ -9,8 +9,7 @@ router.get('/movies', (req, res) => {
     store.find(null)
          .sort({ createdAt: -1 })
          .exec((err, movies) => {
-             res.type('json')
-                .send(movies);
+             res.send(movies);
          });
 });
 
@@ -19,8 +18,7 @@ router.post('/movies', (req, res) => {
     const store = req.app.get('store');
 
     store.insert(movie, (err, movieDoc) => {
-        res.type('json')
-           .send(movieDoc);
+        res.send(movieDoc);
     });
 });
 
@@ -32,9 +30,7 @@ router.get('/movies/search', (req, res) => {
     tmdb.searchMovie(text)
         .then(response => {
             const movies = parseResponse(response);
-
-            res.type('json')
-               .send(movies);
+            res.send(movies);
         });
 
     function parseResponse(response) {
