@@ -5,10 +5,13 @@
 
 - [x] send search query to tmdb
 - [ ] do not send query if 'text' is empty
+- [ ] add alerts when list/search result empty
+- [ ] add "Loading..." in search result when request sent
 
 ## medium priority
 
-* [ ] add purecss for basic styling
+* [x] add purecss for basic styling
+* [ ] move CSS to SASS
 
 ## low priority
 

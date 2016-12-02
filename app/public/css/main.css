@@ -1,0 +1,33 @@
+html,
+body {
+    background-color: #1e1e1e;
+}
+
+.movy-list {
+    padding: 20px;
+}
+
+.movy-search {
+    padding: 20px;
+}
+
+.movy-list-item {
+    display: inline-block;
+    color: white;
+    background-color: #121212;
+
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.movy-search-form {
+    margin-bottom: 10px;
+}
+
+.movy-search-result-item {
+    color: white;
+    background-color: #121212;
+
+    padding: 20px;
+    margin-bottom: 10px;
+}

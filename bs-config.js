@@ -12,7 +12,8 @@ const appUri = url.format({
 module.exports = {
     'files': [
         'app/**/*.pug',
-        'dist/js/bundle.js'
+        'dist/js/bundle.js',
+        'app/**/*.css'
     ],
     'proxy': appUri,
     'logLevel': 'info',

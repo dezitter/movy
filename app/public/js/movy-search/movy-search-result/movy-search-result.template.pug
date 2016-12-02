@@ -1,2 +1,4 @@
-div(ng-repeat="movie in $ctrl.results")
-  movy-search-result-item(movie="movie")
+.movy-search-results
+  .pure-g(ng-repeat="movie in $ctrl.results")
+    .pure-u-1
+      movy-search-result-item(movie="movie")
