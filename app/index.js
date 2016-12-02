@@ -10,6 +10,11 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 app.set('tmdb', new Tmdb({ apiKey: process.env.TMDB_API_KEY }));
+app.set('tmdb.config', {
+    posterBaseUrl  : process.env.TMDB_POSTER_BASE_URL,
+    posterSize     : process.env.TMDB_POSTER_SIZE,
+    smallPosterSize: process.env.TMDB_SMALL_POSTER_SIZE
+});
 
 app.use(express.static( path.join(__dirname, '..', 'dist') ));
 app.use(express.static( path.join(__dirname, 'public') ));

@@ -3,7 +3,7 @@
 - [x] movy-search-result component
  - [x] render search results
 
-- [ ] show small posters in search result
+- [x] show small posters in search result
 - [ ] add '+' button in search result
 
 - [ ] add a data store

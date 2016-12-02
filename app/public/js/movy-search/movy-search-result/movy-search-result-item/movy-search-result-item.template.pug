@@ -1,4 +1,7 @@
 .movy-search-result-item
+  .movy-poster
+    img(ng-src="{{ $ctrl.movie.small_poster_url }}")
+
   .movy-title
     | {{ $ctrl.movie.title }}
 
