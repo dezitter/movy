@@ -1,12 +1,9 @@
-const buildPosterUrl = require('./build-poster-path');
+const getPosterSpec = require('./get-poster-spec');
 
 function parseSearchResult(result, config) {
-    const { posterBaseUrl, posterSize, smallPosterSize } = config;
+    const posterSpec = getPosterSpec(result.poster_path, config);
 
-    return Object.assign(result, {
-        poster_url      : buildPosterUrl(posterBaseUrl, posterSize,      result.poster_path),
-        small_poster_url: buildPosterUrl(posterBaseUrl, smallPosterSize, result.poster_path)
-    });
+    return Object.assign(result, posterSpec);
 }
 
 module.exports = parseSearchResult;
