@@ -9,6 +9,8 @@ A simple web-based movie manager.
     $ cp env.example .env
     $ npm install
 
+Set your [TMDb](https://www.themoviedb.org/documentation/api) api key in the `.env` file.
+
 ## Run
 
     $ cd movy/

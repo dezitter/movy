@@ -1,9 +1,10 @@
 ## high priority
 
-- [*] movy-search-result component
- - [*] render search results
+- [x] movy-search-result component
+ - [x] render search results
 
-- [ ] send search query to tmdb
+- [x] send search query to tmdb
+- [ ] do not send query if 'text' is empty
 
 ## medium priority
 
