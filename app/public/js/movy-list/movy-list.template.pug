@@ -1,3 +1,2 @@
 div(ng-repeat="movie in $ctrl.store.movies")
-  span.movy-title
-    | {{ movie.title }}
+  movy-list-item(movie="movie")
