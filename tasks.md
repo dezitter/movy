@@ -13,7 +13,7 @@
 - [ ] add a 'x' button to remove movies from store
 - [ ] show posters in movie list
 
-- [ ] add a default poster if no poster path
+- [x] add a default poster if no poster path
 
 - [x] send search query to tmdb
 - [ ] do not send query if 'text' is empty
