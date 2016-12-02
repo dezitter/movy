@@ -1,9 +1,13 @@
 ## high priority
 
-- [ ] movy-search-result component
- - [ ] render search results
+- [*] movy-search-result component
+ - [*] render search results
+
+- [ ] send search query to tmdb
 
 ## medium priority
+
+* [ ] add purecss for basic styling
 
 ## low priority
 
