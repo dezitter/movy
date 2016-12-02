@@ -1,4 +1,5 @@
 .env
+store.db
 
 dist/
 node_modules/

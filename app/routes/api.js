@@ -4,19 +4,24 @@ const router = express.Router();
 const parseSearchResult = require('./util/parse-search-result');
 
 router.get('/movies', (req, res) => {
-    res.type('json')
-       .send([
-            { title: 'foo' },
-            { title: 'bar' },
-            { title: 'quz' }
-       ]);
+    const store = req.app.get('store');
+
+    store.find(null)
+         .sort({ createdAt: -1 })
+         .exec((err, movies) => {
+             res.type('json')
+                .send(movies);
+         });
 });
 
 router.post('/movies', (req, res) => {
     const movie = req.body;
+    const store = req.app.get('store');
 
-    res.type('json')
-       .send(movie);
+    store.insert(movie, (err, movieDoc) => {
+        res.type('json')
+           .send(movieDoc);
+    });
 });
 
 router.get('/movies/search', (req, res) => {

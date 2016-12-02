@@ -6,9 +6,11 @@
 - [x] show small posters in search result
 - [x] add '+' button in search result
 
-- [ ] add a data store
-- [ ] insert new movie in data store
-- [ ] retrieve list of movie from data store
+- [x] add a data store
+- [x] insert new movie in data store
+- [x] retrieve list of movie from data store
+
+- [ ] remove useless .type('json'), express will handle it itself (http://expressjs.com/en/4x/api.html#res.send)
 
 - [ ] add a 'x' button to remove movies from store
 - [x] show posters in movie list
@@ -24,6 +26,8 @@
 
 * [x] add purecss for basic styling
 * [ ] move CSS to SASS
+* [ ] handle route errors
+* [ ] handle Store queries errors
 
 ## low priority
 

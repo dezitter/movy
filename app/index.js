@@ -1,3 +1,4 @@
+const Datastore = require('nedb');
 const Tmdb = require('tmdb-v3');
 const bodyParser = require('body-parser');
 const express = require('express');
@@ -18,6 +19,11 @@ app.set('tmdb.config', {
     defaultPoster:      process.env.DEFAULT_POSTER,
     localPosterBaseUrl: process.env.LOCAL_POSTER_BASE_URL
 });
+app.set('store', new Datastore({
+    filename: process.env.STORE_FILENAME,
+    autoload: true,
+    timestampData: true
+}));
 
 app.use(bodyParser.json());
 app.use(express.static( path.join(__dirname, '..', 'dist') ));
