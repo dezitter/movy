@@ -1,4 +1,5 @@
 const Tmdb = require('tmdb-v3');
+const bodyParser = require('body-parser');
 const express = require('express');
 const path = require('path');
 
@@ -18,6 +19,7 @@ app.set('tmdb.config', {
     localPosterBaseUrl: process.env.LOCAL_POSTER_BASE_URL
 });
 
+app.use(bodyParser.json());
 app.use(express.static( path.join(__dirname, '..', 'dist') ));
 app.use(express.static( path.join(__dirname, 'public') ));
 

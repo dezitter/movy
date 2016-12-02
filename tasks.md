@@ -4,14 +4,14 @@
  - [x] render search results
 
 - [x] show small posters in search result
-- [ ] add '+' button in search result
+- [x] add '+' button in search result
 
 - [ ] add a data store
 - [ ] insert new movie in data store
 - [ ] retrieve list of movie from data store
 
 - [ ] add a 'x' button to remove movies from store
-- [ ] show posters in movie list
+- [x] show posters in movie list
 
 - [x] add a default poster if no poster path
 

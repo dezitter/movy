@@ -1,17 +1,24 @@
 function StoreFactory(Movie) {
-    var that = this;
 
-    that.movies = [];
+    class Store {
 
-    initialize();
+        constructor() {
+            this.movies = [];
+            this.fetchMovies();
+        }
 
-    function initialize() {
-        fetchMovies().then(movies => that.movies = movies);
+        saveMovie(movie) {
+            return Movie.save(movie).$promise
+                .then(movie => this.movies.unshift(movie));
+        }
+
+        fetchMovies() {
+            return Movie.query().$promise
+                .then(movies => this.movies = movies);
+        }
     }
 
-    function fetchMovies() {
-        return Movie.query().$promise;
-    }
+    return new Store();
 }
 
 module.exports = [

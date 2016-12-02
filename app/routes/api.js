@@ -12,6 +12,13 @@ router.get('/movies', (req, res) => {
        ]);
 });
 
+router.post('/movies', (req, res) => {
+    const movie = req.body;
+
+    res.type('json')
+       .send(movie);
+});
+
 router.get('/movies/search', (req, res) => {
     const tmdb = req.app.get('tmdb');
     const tmdbConfig = req.app.get('tmdb.config');

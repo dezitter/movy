@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/dezitter/movy#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "debug": "^2.3.3",
     "dotenv": "^2.0.0",
     "express": "^4.14.0",

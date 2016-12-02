@@ -6,6 +6,6 @@ const storeModule = angular.module('core.Store', [
 ]);
 
 storeModule
-    .service('Store', StoreService);
+    .factory('Store', StoreService);
 
 module.exports = storeModule;
