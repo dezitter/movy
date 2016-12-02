@@ -3,6 +3,18 @@
 - [x] movy-search-result component
  - [x] render search results
 
+- [ ] show small posters in search result
+- [ ] add '+' button in search result
+
+- [ ] add a data store
+- [ ] insert new movie in data store
+- [ ] retrieve list of movie from data store
+
+- [ ] add a 'x' button to remove movies from store
+- [ ] show posters in movie list
+
+- [ ] add a default poster if no poster path
+
 - [x] send search query to tmdb
 - [ ] do not send query if 'text' is empty
 - [ ] add alerts when list/search result empty
