@@ -3,6 +3,14 @@ body {
     background-color: #1e1e1e;
 }
 
+.movy-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    text-align: center;
+}
+
 .movy-list {
     padding: 20px;
 }
@@ -17,7 +25,10 @@ body {
     background-color: #121212;
 
     padding: 20px;
-    margin-right: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+
+    width: 185px;
 }
 
 .movy-search-form {
