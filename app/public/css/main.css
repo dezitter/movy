@@ -31,3 +31,14 @@ body {
     padding: 20px;
     margin-bottom: 10px;
 }
+
+.alert-info {
+    border: 1px solid;
+    border-radius: 5px;
+
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #31708f;
+
+    padding: 10px;
+}

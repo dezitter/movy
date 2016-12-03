@@ -2,7 +2,7 @@
 
 - [x] do not send query if 'text' is empty
 
-- [ ] add alerts when list/search result empty
+- [x] add alerts when list/search result empty
 - [ ] add "Loading..." in search result when request was sent
 
 - [ ] add a 'x' button to remove movies from store
