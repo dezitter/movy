@@ -6,7 +6,7 @@
 - [x] add "Loading..." in search result when request was sent
 - [ ] add a clear button in <movy-search>
 
-- [ ] add a 'x' button to remove movies from store
+- [x] add a 'x' button to remove movies from store
 
 - [ ] add a <movy-list-filter> component
  - filter by *title*

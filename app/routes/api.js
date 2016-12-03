@@ -22,6 +22,15 @@ router.post('/movies', (req, res) => {
     });
 });
 
+router.delete('/movies/:_id', (req, res) => {
+    const _id = req.params._id;
+    const store = req.app.get('store');
+
+    store.remove({ _id }, (err, numRemoved) => {
+        res.send({ numRemoved });
+    });
+});
+
 router.get('/movies/search', (req, res) => {
     const tmdb = req.app.get('tmdb');
     const tmdbConfig = req.app.get('tmdb.config');

@@ -8,7 +8,8 @@ module.exports = {
         MovyListItemController
     ],
     bindings: {
-        movie: '='
+        movie: '=',
+        onRemove: '&'
     },
     template: template()
 };

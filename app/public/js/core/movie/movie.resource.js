@@ -1,5 +1,5 @@
 function MovieFactory($resource) {
-    const baseUrl = '/api/movies';
+    const baseUrl = '/api/movies/:_id';
 
     return $resource(baseUrl, null, {
         search: {

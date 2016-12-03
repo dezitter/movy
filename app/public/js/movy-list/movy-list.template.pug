@@ -1,5 +1,9 @@
 .movy-list
-  movy-list-item(ng-repeat="movie in $ctrl.store.movies" movie="movie")
+  movy-list-item(
+    movie="movie"
+    on-remove="$ctrl.onRemove(movie)"
+    ng-repeat="movie in $ctrl.store.movies"
+  )
 
 .alert-info(ng-show="$ctrl.store.movies.length === 0")
   = "Your list is empty."

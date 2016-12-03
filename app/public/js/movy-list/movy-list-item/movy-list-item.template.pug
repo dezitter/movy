@@ -1,6 +1,8 @@
 .movy-list-item
   .movy-poster
     img(ng-src="{{ $ctrl.movie.poster_url }}")
+    button.pure-button.movy-remove(type="button" ng-click="$ctrl.onRemove({ movie: $ctrl.movie })")
+      = "x"
 
   .movy-title
     | {{ $ctrl.movie.title }}
