@@ -5,19 +5,23 @@ function MovySearchController(Movie) {
 
     vm.loading = false;
     vm.results = [];
+    vm.onClear = onClear;
     vm.onSubmit = onSubmit;
 
+    function onClear() {
+        updateScope({ results: [], loading: false });
+    }
+
     function onSubmit(text) {
-        vm.loading = true;
-        vm.results = [];
+        updateScope({ results: [], loading: true });
 
         searchMovie(text)
-            .then(onResolve);
+            .then(movies => updateScope({ results: movies, loading: false }));
+    }
 
-        function onResolve(movies) {
-            vm.loading = false;
-            vm.results = movies;
-        }
+    function updateScope(patch) {
+        vm.loading = patch.loading;
+        vm.results = patch.results;
     }
 
     function searchMovie(text) {

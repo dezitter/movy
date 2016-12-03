@@ -1,2 +1,3 @@
 form.pure-form.movy-search-form(ng-submit="$ctrl.onSubmit({ text: $ctrl.text })")
   input(ng-model="$ctrl.text" type="text" placeholder="Search title..." ng-required="true")
+  button.pure-button(type="button" ng-click="$ctrl.clear()")= "x"
