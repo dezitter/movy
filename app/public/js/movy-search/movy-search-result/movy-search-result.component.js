@@ -8,6 +8,7 @@ module.exports = {
         MovySearchResultController
     ],
     bindings: {
+        loading: '<',
         results: '<'
     },
     template: template()

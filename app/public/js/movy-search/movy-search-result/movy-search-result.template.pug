@@ -3,7 +3,12 @@
     .pure-u-1
       movy-search-result-item(movie="movie")
 
-  .pure-g(ng-show="$ctrl.results.length === 0")
+  .pure-g(ng-show="!$ctrl.loading && $ctrl.results.length === 0")
     .pure-u-1
       .alert-info
         = "No results."
+
+  .pure-g(ng-show="$ctrl.loading")
+    .pure-u-1
+      .alert-info
+        = "Loading..."
