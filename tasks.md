@@ -1,6 +1,6 @@
 ## high priority
 
-- [ ] do not send query if 'text' is empty
+- [x] do not send query if 'text' is empty
 
 - [ ] add alerts when list/search result empty
 - [ ] add "Loading..." in search result when request was sent
