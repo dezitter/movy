@@ -1,9 +1,18 @@
-.movy-list
-  movy-list-item(
-    movie="movie"
-    on-remove="$ctrl.onRemove(movie)"
-    ng-repeat="movie in $ctrl.store.movies"
-  )
+.pure-g
+  .pure-u-1
+    movy-filter
 
-.alert-info(ng-show="$ctrl.store.movies.length === 0")
-  = "Your list is empty."
+.pure-g
+  .pure-u-1
+    .movy-list
+      movy-list-item(
+        movie="movie"
+        on-remove="$ctrl.onRemove(movie)"
+        ng-repeat="movie in ($ctrl.store.movies | filter:{ title: $ctrl.store.filter.title }) as filteredMovies"
+      )
+
+    .alert-info(ng-show="$ctrl.store.movies.length === 0")
+      = "Your list is empty."
+
+    .alert-info(ng-show="$ctrl.store.filter.title.length > 0 && filteredMovies.length === 0")
+      = "Nothing found."

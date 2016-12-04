@@ -4,6 +4,7 @@ function StoreFactory(Movie) {
 
         constructor() {
             this.movies = [];
+            this.filter = {};
             this.fetchMovies();
         }
 

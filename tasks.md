@@ -8,8 +8,8 @@
 
 - [x] add a 'x' button to remove movies from store
 
-- [ ] add a <movy-list-filter> component
- - filter by *title*
+- [x] add a <movy-list-filter> component
+ - [x] filter by *title*
  - sort by title/year
 - [ ] add a <movy-list-pager>  component to paginate
 
