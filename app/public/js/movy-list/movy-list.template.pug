@@ -8,7 +8,9 @@
       movy-list-item(
         movie="movie"
         on-remove="$ctrl.onRemove(movie)"
-        ng-repeat="movie in ($ctrl.store.movies | filter:{ title: $ctrl.store.filter.title }) as filteredMovies"
+        ng-repeat="movie in ($ctrl.store.movies \
+        | filter : { title: $ctrl.store.filter.title } \
+        | orderBy : $ctrl.store.filter.order) as filteredMovies"
       )
 
     .alert-info(ng-show="$ctrl.store.movies.length === 0")

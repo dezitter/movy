@@ -1,5 +1,15 @@
-.pure-g
-  .pure-u-1
-    form.pure-form.movy-filter
-      input(ng-model="$ctrl.store.filter.title" type="text" placeholder="Title...")
-      button.pure-button(type="button" ng-click="$ctrl.clear()")= "x"
+.movy-filter
+  .pure-g
+    .pure-u-2-5
+      form.pure-form
+        input(ng-model="$ctrl.store.filter.title" type="text" placeholder="Title...")
+        button.pure-button(type="button" ng-click="$ctrl.clear()")= "x"
+
+    .pure-u-2-5
+      form.pure-form
+        label
+          span= "Sort by: "
+          select(ng-model="$ctrl.store.filter.order")
+            option(value="createdAt")= "Date added"
+            option(value="title")= "Title"
+            option(value="release_date")= "Release Date"
