@@ -1,0 +1,7 @@
+form.pure-form
+  label
+    span= "Sort by: "
+    select(ng-model="$ctrl.store.filter.order")
+      option(value="createdAt")= "Date added"
+      option(value="title")= "Title"
+      option(value="release_date")= "Release Date"
