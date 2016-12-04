@@ -13,7 +13,7 @@ module.exports = {
     'files': [
         'app/**/*.pug',
         'dist/js/bundle.js',
-        'app/**/*.css'
+        'dist/css/main.css'
     ],
     'proxy': appUri,
     'logLevel': 'info',

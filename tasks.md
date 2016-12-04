@@ -19,8 +19,9 @@
 
 ## medium priority
 
-- [ ] move CSS to SASS
-- [ ] setup gulp build:sass & watch:sass tasks
+- [x] move CSS to SASS
+- [x] setup gulp build:sass & watch:sass tasks
+- [ ] cleanup & organize style definitions
 - [ ] improve look & feel
 - [ ] handle route errors
 - [ ] handle Store queries errors
