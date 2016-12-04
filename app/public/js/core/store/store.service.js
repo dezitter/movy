@@ -5,7 +5,10 @@ function StoreFactory(Movie) {
         constructor() {
             this.movies = [];
             this.filter = {
-                order: 'createdAt'
+                order: {
+                    property: '-createdAt',
+                    reverse: false
+                }
             };
             this.fetchMovies();
         }

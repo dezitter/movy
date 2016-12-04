@@ -11,7 +11,7 @@
 - [x] add a <movy-list-filter> component
  - [x] filter by *title*
  - [x] sort by title/year
- - [ ] allow to reverse sort order
+ - [x] allow to reverse sort order
 - [ ] add a <movy-list-pager>  component to paginate
 
 - [ ] add favorite/watched flags

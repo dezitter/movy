@@ -1,7 +1,11 @@
 form.pure-form
   label
     span= "Sort by: "
-    select(ng-model="$ctrl.store.filter.order")
-      option(value="createdAt")= "Date added"
+    select(ng-model="$ctrl.store.filter.order.property")
+      option(value="-createdAt")= "Date added"
       option(value="title")= "Title"
       option(value="release_date")= "Release Date"
+
+    button.pure-button(ng-click="$ctrl.store.filter.order.reverse = !$ctrl.store.filter.order.reverse")
+      img(ng-show="$ctrl.store.filter.order.reverse === true" src="/img/icon/arrow-up.png")
+      img(ng-show="$ctrl.store.filter.order.reverse === false" src="/img/icon/arrow-down.png")
