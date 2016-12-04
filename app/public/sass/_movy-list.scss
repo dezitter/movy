@@ -1,0 +1,30 @@
+.movy-list-item {
+    display: inline-block;
+    color: $main-text-color;
+    background-color: $item-background-color;
+
+    margin-bottom: $main-margin;
+    margin-right: 5px;
+    padding: $main-padding;
+
+    width: $movy-list-item-width ;
+
+    .movy-poster {
+        position: relative;
+
+        .movy-remove {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: $control-button-font-size;
+
+            color: $main-text-color;
+            background-color: $color-danger;
+        }
+    }
+
+    .movy-title,
+    .movy-release-date {
+        @include text-ellipsis();
+    }
+}

@@ -1,82 +1,17 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'alert';
+
+@import 'movy-filter';
+@import 'movy-list';
+@import 'movy-search';
+
 html,
 body {
-    background-color: #1e1e1e;
-}
-
-.movy-title,
-.movy-release-date {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-
-    text-align: center;
+    background-color: $main-background-color;
 }
 
 .movy-content {
     padding: 20px;
-}
-
-.movy-search {
-    padding: 20px;
-}
-
-.movy-list-item {
-    display: inline-block;
-    color: white;
-    background-color: #121212;
-
-    padding: 20px;
-    margin-right: 5px;
-    margin-bottom: 10px;
-
-    width: 185px;
-}
-
-.movy-poster {
-    position: relative;
-}
-
-.movy-remove {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: .8em;
-
-    color: white;
-    background-color: #c9302c;
-}
-
-.movy-search-form {
-    margin-bottom: 10px;
-}
-
-.movy-filter {
-    margin-bottom: 10px;
-}
-
-.movy-filter label {
-    color: white;
-}
-
-.movy-filter input,select {
-    color: black;
-}
-
-.movy-search-result-item {
-    color: white;
-    background-color: #121212;
-
-    padding: 20px;
-    margin-bottom: 10px;
-}
-
-.alert-info {
-    border: 1px solid;
-    border-radius: 5px;
-
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #31708f;
-
-    padding: 10px;
 }

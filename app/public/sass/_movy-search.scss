@@ -1,0 +1,30 @@
+.movy-search {
+    padding: $main-padding;
+
+	.movy-search-form {
+		margin-bottom: $main-margin;
+	}
+
+	.movy-search-result-item {
+		color: $main-text-color;
+		background-color: $item-background-color;
+
+		padding: $main-padding;
+		margin-bottom: $main-margin;
+
+		.movy-poster {
+			position: relative;
+			display: inline-block;
+
+			.movy-add {
+				position: absolute;
+				top: 0;
+				right: 0;
+				font-size: $control-button-font-size;
+
+				color: $main-text-color;
+				background-color: $color-success;
+			}
+		}
+	}
+}
