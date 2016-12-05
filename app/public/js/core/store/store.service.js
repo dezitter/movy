@@ -10,12 +10,23 @@ function StoreFactory(Movie) {
                     reverse: false
                 }
             };
+            this.pager = {
+                current: 1,
+                total: 1,
+                limit: 10
+            };
             this.fetchMovies();
         }
 
+        // {{{ Movie methods
+
         saveMovie(movie) {
             return Movie.save(movie).$promise
-                .then(movie => this.movies.unshift(movie));
+                .then(onSave.bind(this));
+
+            function onSave(movie) {
+                this.movies.unshift(movie);
+            }
         }
 
         updateMovie(movie, patch) {
@@ -46,8 +57,35 @@ function StoreFactory(Movie) {
 
         fetchMovies() {
             return Movie.query().$promise
-                .then(movies => this.movies = movies);
+                .then(onFetch.bind(this));
+
+            function onFetch(movies) {
+                this.movies = movies;
+                this.updatePager();
+            }
         }
+
+        // }}}
+        // {{{ Pager methods
+
+        updatePager() {
+            const n = this.movies.length;
+            const limit = this.pager.limit;
+
+            this.pager.current = 1;
+            this.pager.total = Math.ceil(n / limit);
+        }
+
+        nextPage() {
+            this.pager.current += 1;
+        }
+
+        previousPage() {
+            this.pager.current -= 1;
+        }
+
+        // }}}
+
     }
 
     return new Store();

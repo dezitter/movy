@@ -1,0 +1,16 @@
+.movy-pager
+  button.pure-button(
+    type="button"
+    ng-click="$ctrl.store.previousPage()"
+    ng-disabled="$ctrl.store.pager.current === 1"
+  )= "Previous"
+
+  span| {{ $ctrl.store.pager.current }}
+  span= " / "
+  span| {{ $ctrl.store.pager.total }}
+
+  button.pure-button(
+    type="button"
+    ng-click="$ctrl.store.nextPage()"
+    ng-disabled="$ctrl.store.pager.current === $ctrl.store.pager.total"
+  )= "Next"

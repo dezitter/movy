@@ -1,6 +1,8 @@
 .pure-g
-  .pure-u-1
+  .pure-u-3-5
     movy-filter
+  .pure-u-2-5
+    movy-pager
 
 .pure-g
   .pure-u-1
@@ -11,7 +13,8 @@
         on-update="$ctrl.onUpdate(movie, patch)"
         ng-repeat="movie in ($ctrl.store.movies \
         | filter : { title: $ctrl.store.filter.title } \
-        | orderBy : $ctrl.store.filter.order.property : $ctrl.store.filter.order.reverse) as filteredMovies"
+        | orderBy : $ctrl.store.filter.order.property : $ctrl.store.filter.order.reverse \
+        | limitTo : $ctrl.store.pager.limit : (($ctrl.store.pager.current - 1) * $ctrl.store.pager.limit)) as filteredMovies"
       )
 
     .alert-info(ng-show="$ctrl.store.movies.length === 0")

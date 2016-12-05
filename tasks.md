@@ -1,5 +1,6 @@
 ## high priority
 
+- [ ] reset filter when Adding a movie with default sorting
 - [x] do not send query if 'text' is empty
 
 - [x] add alerts when list/search result empty
@@ -12,7 +13,7 @@
  - [x] filter by *title*
  - [x] sort by title/year
  - [x] allow to reverse sort order
-- [ ] add a <movy-list-pager>  component to paginate
+- [x] add a <movy-list-pager>  component to paginate
 
 - [ ] add favorite flags
 - [ ] filter checkbox favorite/watched
