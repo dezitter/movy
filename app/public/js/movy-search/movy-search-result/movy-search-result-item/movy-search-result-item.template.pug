@@ -1,7 +1,8 @@
 .movy-search-result-item
   .movy-poster
     img(ng-src="{{ $ctrl.movie.small_poster_url }}")
-    button.pure-button.movy-add(type="button" ng-click="$ctrl.onAdd()")= "+"
+    button.pure-button.movy-add(type="button" ng-click="$ctrl.onAdd()")
+      img(src="/img/icon/ic_add_circle_white_18dp.png")
 
   .movy-title
     | {{ $ctrl.movie.title }}

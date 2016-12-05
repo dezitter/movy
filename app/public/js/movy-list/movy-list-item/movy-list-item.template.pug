@@ -2,7 +2,10 @@
   .movy-poster
     img(ng-src="{{ $ctrl.movie.poster_url }}")
     button.pure-button.movy-remove(type="button" ng-click="$ctrl.onRemove({ movie: $ctrl.movie })")
-      = "x"
+      img(src="/img/icon/ic_delete_white_18dp.png")
+
+    button.pure-button.movy-check(type="button" ng-click="$ctrl.clear()")
+      img(src="/img/icon/ic_check_circle_white_18dp.png")
 
   .movy-title
     | {{ $ctrl.movie.title }}

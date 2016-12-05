@@ -6,6 +6,12 @@ form.pure-form
       option(value="title")= "Title"
       option(value="release_date")= "Release Date"
 
-    button.pure-button(ng-click="$ctrl.store.filter.order.reverse = !$ctrl.store.filter.order.reverse")
-      img(ng-show="$ctrl.store.filter.order.reverse === true" src="/img/icon/arrow-up.png")
-      img(ng-show="$ctrl.store.filter.order.reverse === false" src="/img/icon/arrow-down.png")
+    button.pure-button.movy-sort(ng-click="$ctrl.store.filter.order.reverse = !$ctrl.store.filter.order.reverse")
+      img(
+        src="/img/icon/ic_arrow_upward_black_18dp.png"
+        ng-show="$ctrl.store.filter.order.reverse === true"
+      )
+      img(
+        src="/img/icon/ic_arrow_downward_black_18dp.png"
+        ng-show="$ctrl.store.filter.order.reverse === false"
+      )

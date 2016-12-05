@@ -3,6 +3,10 @@
 
 	.movy-search-form {
 		margin-bottom: $main-margin;
+
+        .movy-clear {
+            @extend .movy-control;
+        }
 	}
 
 	.movy-search-result-item {
@@ -17,12 +21,12 @@
 			display: inline-block;
 
 			.movy-add {
+                @extend .movy-control;
+
 				position: absolute;
 				top: 0;
 				right: 0;
-				font-size: $control-button-font-size;
 
-				color: $main-text-color;
 				background-color: $color-success;
 			}
 		}

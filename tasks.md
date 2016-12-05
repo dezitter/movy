@@ -25,6 +25,7 @@
 - [ ] improve look & feel
 - [ ] handle route errors
 - [ ] handle Store queries errors
+- [ ] add 'title' attr on movie title/release date/controls,poster
 
 ## low priority
 

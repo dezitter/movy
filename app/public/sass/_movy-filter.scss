@@ -1,5 +1,13 @@
 .movy-filter {
     margin-bottom: $main-margin;
+
+    .movy-clear {
+        @extend .movy-control;
+    }
+
+    .movy-sort {
+        @extend .movy-control;
+    }
 }
 
 .movy-filter label {
@@ -9,4 +17,3 @@
 .movy-filter input,select {
     color: black;
 }
-

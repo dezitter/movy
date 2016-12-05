@@ -13,13 +13,34 @@
         position: relative;
 
         .movy-remove {
+            @extend .movy-control;
+
             position: absolute;
             top: 0;
             right: 0;
-            font-size: $control-button-font-size;
 
-            color: $main-text-color;
             background-color: $color-danger;
+        }
+
+        .movy-check {
+            @extend .movy-control;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            background-color: $green;
+            visibility: hidden;
+
+            &.movy-active {
+                visibility: visible;
+            }
+        }
+
+        &:hover {
+            .movy-check {
+                visibility: visible;
+            }
         }
     }
 
