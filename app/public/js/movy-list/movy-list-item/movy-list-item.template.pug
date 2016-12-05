@@ -4,7 +4,11 @@
     button.pure-button.movy-remove(type="button" ng-click="$ctrl.onRemove({ movie: $ctrl.movie })")
       img(src="/img/icon/ic_delete_white_18dp.png")
 
-    button.pure-button.movy-check(type="button" ng-click="$ctrl.clear()")
+    button.pure-button.movy-check(
+      type="button"
+      ng-class="{ 'movy-active': ($ctrl.movie.watched === true) }"
+      ng-click="$ctrl.onUpdate({ movie: $ctrl.movie, patch: { watched: !$ctrl.movie.watched }})"
+    )
       img(src="/img/icon/ic_check_circle_white_18dp.png")
 
   .movy-title

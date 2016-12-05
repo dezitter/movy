@@ -14,7 +14,7 @@
  - [x] allow to reverse sort order
 - [ ] add a <movy-list-pager>  component to paginate
 
-- [ ] add favorite/watched flags
+- [ ] add favorite flags
 - [ ] filter checkbox favorite/watched
 
 ## medium priority

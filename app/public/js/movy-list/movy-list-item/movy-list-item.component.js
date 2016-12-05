@@ -9,7 +9,8 @@ module.exports = {
     ],
     bindings: {
         movie: '=',
-        onRemove: '&'
+        onRemove: '&',
+        onUpdate: '&'
     },
     template: template()
 };

@@ -8,6 +8,7 @@
       movy-list-item(
         movie="movie"
         on-remove="$ctrl.onRemove(movie)"
+        on-update="$ctrl.onUpdate(movie, patch)"
         ng-repeat="movie in ($ctrl.store.movies \
         | filter : { title: $ctrl.store.filter.title } \
         | orderBy : $ctrl.store.filter.order.property : $ctrl.store.filter.order.reverse) as filteredMovies"

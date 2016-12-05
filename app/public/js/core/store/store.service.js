@@ -18,6 +18,19 @@ function StoreFactory(Movie) {
                 .then(movie => this.movies.unshift(movie));
         }
 
+        updateMovie(movie, patch) {
+            return Movie.update({ _id: movie._id }, patch).$promise
+                .then(onUpdate.bind(this));
+
+            function onUpdate(newMovie) {
+                const index = this.movies.indexOf(movie);
+
+                if (index >= 0) {
+                    this.movies[index] = newMovie;
+                }
+            }
+        }
+
         removeMovie(movie) {
             return Movie.remove({ _id: movie._id }).$promise
                 .then(onRemove.bind(this));

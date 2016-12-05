@@ -5,6 +5,9 @@ function MovieFactory($resource) {
         search: {
             isArray: true,
             url: `${baseUrl}/search`
+        },
+        update: {
+            method: 'PUT'
         }
     });
 }
