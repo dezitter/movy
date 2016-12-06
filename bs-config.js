@@ -15,6 +15,7 @@ module.exports = {
         'dist/js/bundle.js',
         'dist/css/main.css'
     ],
+    'online': false,
     'proxy': appUri,
     'logLevel': 'info',
     'browser': 'google-chrome-stable',
