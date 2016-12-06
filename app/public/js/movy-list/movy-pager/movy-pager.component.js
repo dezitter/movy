@@ -1,15 +1,16 @@
 const template = require('./movy-pager.template.pug');
 
-function MovyPagerController(Store) {
-    const vm = this;
-
-    vm.store = Store;
+function MovyPagerController() {
 }
 
 module.exports = {
     controller: [
-        'Store',
         MovyPagerController
     ],
+    bindings: {
+        'state': '<movyPagerState',
+        'nextPage': '&movyNextPage',
+        'previousPage': '&movyPreviousPage'
+    },
     template: template()
 };

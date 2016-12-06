@@ -5,7 +5,11 @@
     )
 
   .pure-u-2-5
-    movy-pager
+    movy-pager(
+      movy-pager-state="$ctrl.store.pager"
+      movy-next-page="$ctrl.nextPage()"
+      movy-previous-page="$ctrl.previousPage()"
+    )
 
 .pure-g
   .pure-u-1

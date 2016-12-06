@@ -1,11 +1,11 @@
 ## high priority
 
-- [ ] rework listing components
+- [x] rework listing components
  - [x] add a <movy-grid> component in <movy-list> to display movies
  - [x] rename <movy-list-item> to <movy-grid-item> and move inside <movy-grid>
  - [x] pass <movy-grid>   data as inputs from <movy-list>
  - [x] pass <movy-filter> data as inputs from <movy-list>
- - [ ] pass <movy-pager>  data as inputs from <movy-list>
+ - [x] pass <movy-pager>  data as inputs from <movy-list>
  - [x] rename <movy-filter-sort-control> as <movy-sort-control>
  - [x] pass <movy-sort-control> data as inputs from <movy-list>
 

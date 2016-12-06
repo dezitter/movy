@@ -6,6 +6,8 @@ function MovyListController(Store) {
     vm.store = Store;
     vm.onRemove = onRemove;
     vm.onUpdate = onUpdate;
+    vm.nextPage = nextPage;
+    vm.previousPage = previousPage;
 
     function onRemove(movie) {
         Store.removeMovie(movie);
@@ -13,6 +15,14 @@ function MovyListController(Store) {
 
     function onUpdate(movie, patch) {
         Store.updateMovie(movie, patch);
+    }
+
+    function nextPage() {
+        Store.nextPage();
+    }
+
+    function previousPage() {
+        Store.previousPage();
     }
 }
 
