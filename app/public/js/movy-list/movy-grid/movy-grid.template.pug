@@ -1,7 +1,5 @@
 movy-grid-item(
   movie="movie"
-  movy-on-remove="$ctrl.onRemove({ movie: movie })"
-  movy-on-update="$ctrl.onUpdate({ movie: movie, patch: patch })"
   ng-repeat="movie in ($ctrl.movies \
   | filter  : { title: $ctrl.filter.title } \
   | orderBy : $ctrl.filter.order.property : $ctrl.filter.order.reverse \

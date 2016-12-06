@@ -1,20 +1,16 @@
 const template = require('./movy-list.template.pug');
 
-function MovyListController(Store) {
+function MovyListController(Store, MovieAction) {
     const vm = this;
 
     vm.store = Store;
-    vm.onRemove = onRemove;
-    vm.onUpdate = onUpdate;
     vm.nextPage = nextPage;
     vm.previousPage = previousPage;
 
-    function onRemove(movie) {
-        Store.removeMovie(movie);
-    }
+    activate();
 
-    function onUpdate(movie, patch) {
-        Store.updateMovie(movie, patch);
+    function activate() {
+        MovieAction.fetchMovies();
     }
 
     function nextPage() {
@@ -29,6 +25,7 @@ function MovyListController(Store) {
 module.exports = {
     controller: [
         'Store',
+        'MovieAction',
         MovyListController
     ],
     template: template()

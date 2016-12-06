@@ -10,9 +10,11 @@
  - [x] pass <movy-sort-control> data as inputs from <movy-list>
 
 - [ ] introduce Action modules
- - [ ] add a MovieAction to update store on add/fetch/remove
+ - [x] add a MovieAction to update store on add/fetch/remove
  - [ ] add a FilterAction to update store on filter/sort
  - [ ] add a PagerAction to update store on prev/next
+ - [ ] add Store helpers to modify state, DO NOT modify store properties
+ directly from Actions
 
 - [ ] reset filter when Adding a movie with default sorting
 - [x] do not send query if 'text' is empty

@@ -1,18 +1,18 @@
 const template = require('./movy-search-result-item.template.pug');
 
-function MovySearchResultItemController(Store) {
+function MovySearchResultItemController(MovieAction) {
     const vm = this;
 
     vm.onAdd = onAdd;
 
     function onAdd() {
-        Store.saveMovie(vm.movie);
+        MovieAction.saveMovie(vm.movie);
     }
 }
 
 module.exports = {
     controller: [
-        'Store',
+        'MovieAction',
         MovySearchResultItemController
     ],
     bindings: {

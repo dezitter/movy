@@ -10,9 +10,7 @@ module.exports = {
     bindings: {
         filter: '<movyFilter',
         movies: '<movyMovies',
-        pager: '<movyPager',
-        onRemove: '&movyOnRemove',
-        onUpdate: '&movyOnUpdate'
+        pager: '<movyPager'
     },
     template: template()
 };
