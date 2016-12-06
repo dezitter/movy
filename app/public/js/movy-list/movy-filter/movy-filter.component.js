@@ -1,17 +1,18 @@
 const template = require('./movy-filter.template.pug');
 
-function MovyFilterController() {
+function MovyFilterController(FilterAction) {
     const vm = this;
 
     vm.clear = clear;
 
     function clear() {
-        vm.filter.title = '';
+        FilterAction.clear();
     }
 }
 
 module.exports = {
     controller: [
+        'FilterAction',
         MovyFilterController
     ],
     bindings: {

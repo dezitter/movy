@@ -11,7 +11,7 @@
 
 - [ ] introduce Action modules
  - [x] add a MovieAction to update store on add/fetch/remove
- - [ ] add a FilterAction to update store on filter/sort
+ - [x] add a FilterAction to update store on filter/sort
  - [ ] add a PagerAction to update store on prev/next
  - [ ] add Store helpers to modify state, DO NOT modify store properties
  directly from Actions
