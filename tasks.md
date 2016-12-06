@@ -1,49 +1,15 @@
 ## high priority
 
-- [x] rework listing components
- - [x] add a <movy-grid> component in <movy-list> to display movies
- - [x] rename <movy-list-item> to <movy-grid-item> and move inside <movy-grid>
- - [x] pass <movy-grid>   data as inputs from <movy-list>
- - [x] pass <movy-filter> data as inputs from <movy-list>
- - [x] pass <movy-pager>  data as inputs from <movy-list>
- - [x] rename <movy-filter-sort-control> as <movy-sort-control>
- - [x] pass <movy-sort-control> data as inputs from <movy-list>
-
-- [x] introduce Action modules
- - [x] add a MovieAction to update store on add/fetch/remove
- - [x] add a FilterAction to update store on filter/sort
- - [x] add a PagerAction to update store on prev/next
- - [x] add Store helpers to modify state, DO NOT modify store properties
- directly from Actions
-  - remove pending call updatePager when movies[] change
-
 - [ ] update pager when add/remove movie
 - [ ] update pager filter list
 - [ ] reset filter with default sorting and pager on first page when adding a movie
-* [ ] set pager to 1/1 when list empty
-
-- [x] do not send query if 'text' is empty
-
-- [x] add alerts when list/search result empty
-- [x] add "Loading..." in search result when request was sent
-- [x] add a clear button in <movy-search>
-
-- [x] add a 'x' button to remove movies from store
-
-- [x] add a <movy-list-filter> component
- - [x] filter by *title*
- - [x] sort by title/year
- - [x] allow to reverse sort order
-- [x] add a <movy-list-pager>  component to paginate
+- [ ] set pager to 1/1 when list empty
 
 - [ ] add favorite flags
 - [ ] filter checkbox favorite/watched
 
 ## medium priority
 
-- [x] move CSS to SASS
-- [x] setup gulp build:sass & watch:sass tasks
-- [x] cleanup & organize style definitions
 - [ ] improve look & feel
 - [ ] handle route errors
 - [ ] handle Store queries errors
