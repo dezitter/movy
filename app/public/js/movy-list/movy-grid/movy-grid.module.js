@@ -1,10 +1,10 @@
 const angular = require('angular');
 
 const MovyGridComponent = require('./movy-grid.component');
-const MovyListItemModule = require('../movy-list-item/movy-list-item.module');
+const MovyGridItemModule = require('./movy-grid-item/movy-grid-item.module');
 
 const movyGridModule = angular.module('movyGrid', [
-    MovyListItemModule.name,
+    MovyGridItemModule.name,
 ]);
 
 movyGridModule

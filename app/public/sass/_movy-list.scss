@@ -1,4 +1,4 @@
-.movy-list-item {
+.movy-grid-item {
     display: inline-block;
     color: $main-text-color;
     background-color: $item-background-color;
@@ -7,7 +7,7 @@
     margin-right: 5px;
     padding: $main-padding;
 
-    width: $movy-list-item-width ;
+    width: $movy-grid-item-width ;
 
     .movy-poster {
         position: relative;

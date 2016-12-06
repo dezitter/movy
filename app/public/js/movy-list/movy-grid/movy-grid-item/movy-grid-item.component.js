@@ -1,11 +1,11 @@
-const template = require('./movy-list-item.template.pug');
+const template = require('./movy-grid-item.template.pug');
 
-function MovyListItemController() {
+function MovyGridItemController() {
 }
 
 module.exports = {
     controller: [
-        MovyListItemController
+        MovyGridItemController
     ],
     bindings: {
         movie: '=',
