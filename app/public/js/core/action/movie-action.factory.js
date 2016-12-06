@@ -4,47 +4,26 @@ function MovieActionFactory(Store, Movie) {
 
         saveMovie(movie) {
             return Movie.save(movie).$promise
-                .then(onSave);
-
-            function onSave(movie) {
-                Store.movies.unshift(movie);
-            }
+                .then(movie => Store.addMovie(movie));
         }
 
         updateMovie(movie, patch) {
-            return Movie.update({ _id: movie._id }, patch).$promise
-                .then(onUpdate);
+            const _id = movie._id;
 
-            function onUpdate(newMovie) {
-                const index = Store.movies.indexOf(movie);
-
-                if (index >= 0) {
-                    Store.movies[index] = newMovie;
-                }
-            }
+            return Movie.update({ _id }, patch).$promise
+                .then(newMovie => Store.updateMovie(movie, newMovie));
         }
 
         fetchMovies() {
             return Movie.query().$promise
-                .then(onFetch);
-
-            function onFetch(movies) {
-                Store.movies = movies;
-                Store.updatePager();
-            }
+                .then(movies => Store.resetMovies(movies));
         }
 
         removeMovie(movie) {
-            return Movie.remove({ _id: movie._id }).$promise
-                .then(onRemove);
+            const _id = movie._id;
 
-            function onRemove() {
-                const index = Store.movies.indexOf(movie);
-
-                if (index >= 0) {
-                    Store.movies.splice(index, 1);
-                }
-            }
+            return Movie.remove({ _id }).$promise
+                .then(() => Store.removeMovie(movie));
         }
     }
 

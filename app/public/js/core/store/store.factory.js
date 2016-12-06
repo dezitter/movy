@@ -1,4 +1,4 @@
-function StoreFactory(Movie) {
+function StoreFactory() {
 
     class Store {
 
@@ -18,7 +18,50 @@ function StoreFactory(Movie) {
             };
         }
 
+        // {{{ Movie methods
+
+        addMovie(movie) {
+            this.movies.unshift(movie);
+        }
+
+        updateMovie(oldMovie, newMovie) {
+            const index = this.movies.indexOf(oldMovie);
+
+            if (index >= 0) {
+                this.movies[index] = newMovie;
+            }
+        }
+
+        removeMovie(movie) {
+            const index = this.movies.indexOf(movie);
+
+            if (index >= 0) {
+                this.movies.splice(index, 1);
+            }
+        }
+
+        resetMovies(movies) {
+            this.movies = movies;
+            this.updatePager();
+        }
+
+        // }}}
+        // {{{ Filter methods
+
+        clearFilter() {
+            this.filter.title = '';
+        }
+
+        // }}}
         // {{{ Pager methods
+
+        incCurrentPage() {
+            this.pager.current += 1;
+        }
+
+        decCurrentPage() {
+            this.pager.current -= 1;
+        }
 
         updatePager() {
             const n = this.movies.length;
@@ -36,6 +79,5 @@ function StoreFactory(Movie) {
 }
 
 module.exports = [
-    'Movie',
     StoreFactory
 ];

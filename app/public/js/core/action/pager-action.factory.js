@@ -3,11 +3,11 @@ function PagerActionFactory(Store) {
     class PagerAction {
 
         nextPage() {
-            Store.pager.current += 1;
+            Store.incCurrentPage();
         }
 
         previousPage() {
-            Store.pager.current -= 1;
+            Store.decCurrentPage();
         }
     }
 

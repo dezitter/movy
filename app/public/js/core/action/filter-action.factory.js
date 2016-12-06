@@ -3,7 +3,7 @@ function FilterActionFactory(Store) {
     class FilterAction {
 
         clear() {
-            Store.filter.title = '';
+            Store.clearFilter();
         }
     }
 

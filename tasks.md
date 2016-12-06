@@ -9,15 +9,19 @@
  - [x] rename <movy-filter-sort-control> as <movy-sort-control>
  - [x] pass <movy-sort-control> data as inputs from <movy-list>
 
-- [ ] introduce Action modules
+- [x] introduce Action modules
  - [x] add a MovieAction to update store on add/fetch/remove
  - [x] add a FilterAction to update store on filter/sort
  - [x] add a PagerAction to update store on prev/next
- - [ ] add Store helpers to modify state, DO NOT modify store properties
+ - [x] add Store helpers to modify state, DO NOT modify store properties
  directly from Actions
   - remove pending call updatePager when movies[] change
 
-- [ ] reset filter when Adding a movie with default sorting
+- [ ] update pager when add/remove movie
+- [ ] update pager filter list
+- [ ] reset filter with default sorting and pager on first page when adding a movie
+* [ ] set pager to 1/1 when list empty
+
 - [x] do not send query if 'text' is empty
 
 - [x] add alerts when list/search result empty
