@@ -1,6 +1,6 @@
 function MovieActionFactory(Store, Movie) {
 
-    class  MovieAction {
+    class MovieAction {
 
         saveMovie(movie) {
             return Movie.save(movie).$promise
