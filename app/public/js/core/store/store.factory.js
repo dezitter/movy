@@ -22,6 +22,7 @@ function StoreFactory() {
 
         addMovie(movie) {
             this.movies.unshift(movie);
+            this.updatePager({ current: 1 });
         }
 
         updateMovie(oldMovie, newMovie) {
@@ -37,12 +38,13 @@ function StoreFactory() {
 
             if (index >= 0) {
                 this.movies.splice(index, 1);
+                this.updatePager();
             }
         }
 
         resetMovies(movies) {
             this.movies = movies;
-            this.updatePager();
+            this.updatePager({ current: 1 });
         }
 
         // }}}
@@ -63,12 +65,17 @@ function StoreFactory() {
             this.pager.current -= 1;
         }
 
-        updatePager() {
-            const n = this.movies.length;
+        updatePager(patch) {
             const limit = this.pager.limit;
+            const n = this.movies.length;
+            const total = Math.ceil(n / limit);
+            var current = this.pager.current;
 
-            this.pager.current = 1;
-            this.pager.total = Math.ceil(n / limit);
+            if (total < this.pager.current) {
+                current = total;
+            }
+
+            Object.assign(this.pager, { current, total }, patch);
         }
 
         // }}}
