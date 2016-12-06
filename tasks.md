@@ -3,7 +3,7 @@
 - [ ] rework listing components
  - [x] add a <movy-grid> component in <movy-list> to display movies
  - [x] rename <movy-list-item> to <movy-grid-item> and move inside <movy-grid>
- - [ ] pass <movy-grid>   data as inputs from <movy-list>
+ - [x] pass <movy-grid>   data as inputs from <movy-list>
  - [ ] pass <movy-filter> data as inputs from <movy-list>
  - [ ] pass <movy-pager>  data as inputs from <movy-list>
  - [ ] rename <movy-filter-sort-control> as <movy-sort-control>
@@ -39,5 +39,6 @@
 
 ## low priority
 
+- [ ] make sure all attributes/components/bindigns are prefixed
 - [ ] load .min scripts in 'production' environment
 - [ ] dump initial movie list in HTML to save request & round-trip

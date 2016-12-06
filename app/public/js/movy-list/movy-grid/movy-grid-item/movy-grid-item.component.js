@@ -9,8 +9,8 @@ module.exports = {
     ],
     bindings: {
         movie: '=',
-        onRemove: '&',
-        onUpdate: '&'
+        onRemove: '&movyOnRemove',
+        onUpdate: '&movyOnUpdate'
     },
     template: template()
 };

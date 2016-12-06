@@ -1,15 +1,15 @@
 movy-grid-item(
   movie="movie"
-  on-remove="$ctrl.onRemove(movie)"
-  on-update="$ctrl.onUpdate(movie, patch)"
-  ng-repeat="movie in ($ctrl.store.movies \
-  | filter : { title: $ctrl.store.filter.title } \
-  | orderBy : $ctrl.store.filter.order.property : $ctrl.store.filter.order.reverse \
-  | limitTo : $ctrl.store.pager.limit : (($ctrl.store.pager.current - 1) * $ctrl.store.pager.limit)) as filteredMovies"
+  movy-on-remove="$ctrl.onRemove({ movie: movie })"
+  movy-on-update="$ctrl.onUpdate({ movie: movie, patch: patch })"
+  ng-repeat="movie in ($ctrl.movies \
+  | filter  : { title: $ctrl.filter.title } \
+  | orderBy : $ctrl.filter.order.property : $ctrl.filter.order.reverse \
+  | limitTo : $ctrl.pager.limit : (($ctrl.pager.current - 1) * $ctrl.pager.limit)) as filteredMovies"
 )
 
-.alert-info(ng-show="$ctrl.store.movies.length === 0")
+.alert-info(ng-show="$ctrl.movies.length === 0")
   = "Your list is empty."
 
-.alert-info(ng-show="$ctrl.store.filter.title.length > 0 && filteredMovies.length === 0")
+.alert-info(ng-show="$ctrl.filter.title.length > 0 && filteredMovies.length === 0")
   = "Nothing found."

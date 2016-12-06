@@ -1,25 +1,18 @@
 const template = require('./movy-grid.template.pug');
 
-function MovyGridController(Store) {
-    const vm = this;
-
-    vm.store = Store;
-    vm.onRemove = onRemove;
-    vm.onUpdate = onUpdate;
-
-    function onRemove(movie) {
-        Store.removeMovie(movie);
-    }
-
-    function onUpdate(movie, patch) {
-        Store.updateMovie(movie, patch);
-    }
+function MovyGridController() {
 }
 
 module.exports = {
     controller: [
-        'Store',
         MovyGridController
     ],
+    bindings: {
+        filter: '<movyFilter',
+        movies: '<movyMovies',
+        pager: '<movyPager',
+        onRemove: '&movyOnRemove',
+        onUpdate: '&movyOnUpdate'
+    },
     template: template()
 };
