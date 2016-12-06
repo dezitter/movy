@@ -4,24 +4,21 @@ function StoreFactory() {
 
         constructor() {
             this.movies = [];
-            this.filter = {
-                title: '',
-                order: {
-                    property: '-createdAt',
-                    reverse: false
-                }
-            };
             this.pager = {
                 current: 1,
                 total: 1,
                 limit: 10
             };
+
+            this.resetFilter();
         }
 
         // {{{ Movie methods
 
         addMovie(movie) {
             this.movies.unshift(movie);
+
+            this.resetFilter();
             this.updatePager({ current: 1 });
         }
 
@@ -52,6 +49,16 @@ function StoreFactory() {
 
         clearFilter() {
             this.filter.title = '';
+        }
+
+        resetFilter() {
+            this.filter = {
+                title: '',
+                order: {
+                    property: '-createdAt',
+                    reverse: false
+                }
+            };
         }
 
         // }}}

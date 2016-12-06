@@ -2,7 +2,7 @@
 
 - [x] update pager when add/remove movie
 - [ ] update pager filter list
-- [ ] reset filter with default sorting and pager on first page when adding a movie
+- [x] reset filter with default sorting and pager on first page when adding a movie
 - [ ] set pager to 1/1 when list empty
 
 - [ ] add favorite flags
