@@ -1,11 +1,11 @@
 const angular = require('angular');
 
-const StoreService = require('./store.service');
+const StoreFactory = require('./store.factory');
 
 const storeModule = angular.module('core.Store', [
 ]);
 
 storeModule
-    .factory('Store', StoreService);
+    .factory('Store', StoreFactory);
 
 module.exports = storeModule;
