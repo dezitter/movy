@@ -4,10 +4,15 @@
  - [x] add a <movy-grid> component in <movy-list> to display movies
  - [x] rename <movy-list-item> to <movy-grid-item> and move inside <movy-grid>
  - [x] pass <movy-grid>   data as inputs from <movy-list>
- - [ ] pass <movy-filter> data as inputs from <movy-list>
+ - [x] pass <movy-filter> data as inputs from <movy-list>
  - [ ] pass <movy-pager>  data as inputs from <movy-list>
  - [ ] rename <movy-filter-sort-control> as <movy-sort-control>
- - [ ] pass <movy-sort-control> data as inputs from <movy-list>
+ - [x] pass <movy-sort-control> data as inputs from <movy-list>
+
+- [ ] introduce Action modules
+ - [ ] add a MovieAction to update store on add/fetch/remove
+ - [ ] add a FilterAction to update store on filter/sort
+ - [ ] add a PagerAction to update store on prev/next
 
 - [ ] reset filter when Adding a movie with default sorting
 - [x] do not send query if 'text' is empty

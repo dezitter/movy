@@ -1,20 +1,21 @@
 const template = require('./movy-filter.template.pug');
 
-function MovyFilterController(Store) {
+function MovyFilterController() {
     const vm = this;
 
-    vm.store = Store;
     vm.clear = clear;
 
     function clear() {
-        vm.store.filter.title = '';
+        vm.filter.title = '';
     }
 }
 
 module.exports = {
     controller: [
-        'Store',
         MovyFilterController
     ],
+    bindings: {
+        filter: '<movyFilter'
+    },
     template: template()
 };
