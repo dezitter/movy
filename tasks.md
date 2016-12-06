@@ -12,9 +12,10 @@
 - [ ] introduce Action modules
  - [x] add a MovieAction to update store on add/fetch/remove
  - [x] add a FilterAction to update store on filter/sort
- - [ ] add a PagerAction to update store on prev/next
+ - [x] add a PagerAction to update store on prev/next
  - [ ] add Store helpers to modify state, DO NOT modify store properties
  directly from Actions
+  - remove pending call updatePager when movies[] change
 
 - [ ] reset filter when Adding a movie with default sorting
 - [x] do not send query if 'text' is empty

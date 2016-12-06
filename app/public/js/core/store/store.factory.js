@@ -28,14 +28,6 @@ function StoreFactory(Movie) {
             this.pager.total = Math.ceil(n / limit);
         }
 
-        nextPage() {
-            this.pager.current += 1;
-        }
-
-        previousPage() {
-            this.pager.current -= 1;
-        }
-
         // }}}
 
     }

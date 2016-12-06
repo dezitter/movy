@@ -4,21 +4,11 @@ function MovyListController(Store, MovieAction) {
     const vm = this;
 
     vm.store = Store;
-    vm.nextPage = nextPage;
-    vm.previousPage = previousPage;
 
     activate();
 
     function activate() {
         MovieAction.fetchMovies();
-    }
-
-    function nextPage() {
-        Store.nextPage();
-    }
-
-    function previousPage() {
-        Store.previousPage();
     }
 }
 
