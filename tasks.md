@@ -6,7 +6,7 @@
  - [x] pass <movy-grid>   data as inputs from <movy-list>
  - [x] pass <movy-filter> data as inputs from <movy-list>
  - [ ] pass <movy-pager>  data as inputs from <movy-list>
- - [ ] rename <movy-filter-sort-control> as <movy-sort-control>
+ - [x] rename <movy-filter-sort-control> as <movy-sort-control>
  - [x] pass <movy-sort-control> data as inputs from <movy-list>
 
 - [ ] introduce Action modules

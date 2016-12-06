@@ -1,4 +1,4 @@
-const template = require('./movy-filter-sort-control.template.pug');
+const template = require('./movy-sort-control.template.pug');
 
 function MovyFilterSortControlController() {
 }
