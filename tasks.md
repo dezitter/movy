@@ -1,5 +1,14 @@
 ## high priority
 
+- [ ] rework listing components
+ - [ ] add a <movy-grid> component in <movy-list> to display movies
+ - [ ] rename <movy-list-item> to <movy-grid-item> and move inside <movy-grid>
+ - [ ] pass <movy-grid>   data as inputs from <movy-list>
+ - [ ] pass <movy-filter> data as inputs from <movy-list>
+ - [ ] pass <movy-pager>  data as inputs from <movy-list>
+ - [ ] rename <movy-filter-sort-control> as <movy-sort-control>
+ - [ ] pass <movy-sort-control> data as inputs from <movy-list>
+
 - [ ] reset filter when Adding a movie with default sorting
 - [x] do not send query if 'text' is empty
 
