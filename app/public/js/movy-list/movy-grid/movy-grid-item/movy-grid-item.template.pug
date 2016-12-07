@@ -1,6 +1,6 @@
 .movy-grid-item
   .movy-poster
-    img(ng-src="{{ $ctrl.movie.poster_url }}")
+    img(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
     button.pure-button.movy-remove(type="button" ng-click="$ctrl.onRemove()")
       img(src="/img/icon/ic_delete_white_18dp.png")
 
@@ -11,8 +11,8 @@
     )
       img(src="/img/icon/ic_check_circle_white_18dp.png")
 
-  .movy-title
+  .movy-title(title="{{ $ctrl.movie.title }}")
     | {{ $ctrl.movie.title }}
 
-  .movy-release-date
+  .movy-release-date(title="{{ $ctrl.movie.release_date }}")
     | ({{ $ctrl.movie.release_date }})
