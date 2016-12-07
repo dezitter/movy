@@ -16,7 +16,12 @@ function MovieActionFactory(Store, Movie) {
 
         fetchMovies() {
             return Movie.query().$promise
-                .then(movies => Store.resetMovies(movies));
+                .then(onResolve);
+
+            function onResolve(movies) {
+                Store.resetMovies(movies);
+                return movies;
+            }
         }
 
         removeMovie(movie) {

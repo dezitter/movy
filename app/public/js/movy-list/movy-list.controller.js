@@ -1,11 +1,13 @@
 function MovyListController($scope, $filter, Store, MovieAction, PagerAction) {
+    $scope.allMovies = [];
     $scope.movies = [];
     $scope.store = Store;
 
     activate();
 
     function activate() {
-        MovieAction.fetchMovies();
+        MovieAction.fetchMovies()
+            .then(movies => $scope.allMovies = movies);
 
         $scope.$watch('store.filter', onChange, true);
         $scope.$watchCollection('store.movies', onChange);

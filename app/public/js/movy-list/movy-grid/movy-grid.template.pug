@@ -5,8 +5,8 @@ movy-grid-item(
   | limitTo : $ctrl.pager.limit : (($ctrl.pager.current - 1) * $ctrl.pager.limit)) as filteredMovies"
 )
 
-.alert-info(ng-show="$ctrl.movies.length === 0")
+.alert-info(ng-show="$ctrl.allMovies.length === 0")
   = "Your list is empty."
 
-.alert-info(ng-show="$ctrl.filter.title.length > 0 && filteredMovies.length === 0")
+.alert-info(ng-show="$ctrl.isFiltering() && filteredMovies.length === 0")
   = "Nothing found."
