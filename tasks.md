@@ -3,7 +3,7 @@
 - [x] update pager when add/remove movie
 - [x] update pager filter list
 - [x] reset filter with default sorting and pager on first page when adding a movie
-- [ ] set pager to 1/1 when list empty
+- [x] set pager to 1/1 when list empty
 
 - [ ] add favorite flags
 - [ ] filter checkbox favorite/watched

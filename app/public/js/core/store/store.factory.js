@@ -83,9 +83,21 @@ function StoreFactory() {
 
         updatePager(patch) {
             var current = this.pager.current;
+            const isTotalNumber = angular.isNumber(patch.total);
+            const isCurrentNumber = angular.isNumber(patch.current);
 
-            if (angular.isNumber(patch.total)
-            && !angular.isNumber(patch.current)
+            if (isTotalNumber
+            && patch.total <= 0) {
+                patch.total = 1;
+            }
+
+            if (isCurrentNumber
+            && patch.current <= 0) {
+                patch.current = 1;
+            }
+
+            if (isTotalNumber
+            && !isCurrentNumber
             && patch.total < current) {
                 current = patch.total;
             }
