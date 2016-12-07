@@ -3,6 +3,7 @@
     img(ng-src="{{ $ctrl.movie.small_poster_url }}" title="{{ $ctrl.movie.title }}")
     button.pure-button.movy-add(
       type="button"
+      title="Add"
       ng-click="$ctrl.onAdd()"
       ng-disabled="{{ $ctrl.isInStore() }}"
     )

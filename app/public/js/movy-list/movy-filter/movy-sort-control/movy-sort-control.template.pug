@@ -6,7 +6,7 @@ form.pure-form
       option(value="title")= "Title"
       option(value="release_date")= "Release Date"
 
-    button.pure-button.movy-sort(ng-click="$ctrl.filter.order.reverse = !$ctrl.filter.order.reverse")
+    button.pure-button.movy-sort(title="Reverse order" ng-click="$ctrl.filter.order.reverse = !$ctrl.filter.order.reverse")
       img(
         src="/img/icon/ic_arrow_upward_black_18dp.png"
         ng-show="$ctrl.filter.order.reverse === true"
