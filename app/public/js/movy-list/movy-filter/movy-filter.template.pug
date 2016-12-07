@@ -10,3 +10,13 @@
       movy-sort-control(
         movy-filter="$ctrl.filter"
       )
+
+    .pure-u-1-5
+      form.pure-form
+        label
+          span= "Starred"
+          input(ng-model="$ctrl.filter.starred" type="checkbox")
+
+        label
+          span= "Watched"
+          input(ng-model="$ctrl.filter.watched" type="checkbox")

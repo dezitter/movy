@@ -17,14 +17,31 @@ function MovyListController($scope, $filter, Store, MovieAction, PagerAction) {
     }
 
     function filterMovies() {
+        var filteredMovies;
         const movies = $scope.store.getMovies();
-        const filter = $scope.store.filter;
+        const { title, starred, watched } = $scope.store.filter;
 
-        $scope.movies = byTitle(movies, { title: filter.title });
+        filteredMovies = byTitle(movies, { title });
+        filteredMovies = byFlag(filteredMovies, 'starred', starred);
+        filteredMovies = byFlag(filteredMovies, 'watched', watched);
+
+        $scope.movies = filteredMovies;
     }
 
     function byTitle(movies, predicate) {
         return $filter('filter')(movies, predicate);
+    }
+
+    function byFlag(movies, name, flag) {
+        return $filter('filter')(movies, predicate);
+
+        function predicate(movie) {
+            if (!flag) {
+                return true;
+            }
+
+            return movie[name] === flag;
+        }
     }
 
     function getTotalpage() {

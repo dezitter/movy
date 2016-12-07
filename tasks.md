@@ -2,7 +2,7 @@
 
 - [ ] limit search results
 - [x] add favorite flags
-- [ ] filter checkbox favorite/watched
+- [x] filter checkbox favorite/watched
 
 ## medium priority
 
