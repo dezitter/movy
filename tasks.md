@@ -1,5 +1,6 @@
 ## high priority
 
+- [x] prevent duplicates from being added
 - [ ] limit search results
 - [x] add favorite flags
 - [x] filter checkbox favorite/watched

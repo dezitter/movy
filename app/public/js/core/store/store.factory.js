@@ -53,6 +53,10 @@ function StoreFactory() {
             this.updatePager({ current: 1 });
         }
 
+        containsMovie(movie) {
+            return this.movies.find(m => m.id === movie.id) !== undefined;
+        }
+
         // }}}
         // {{{ Filter methods
 
