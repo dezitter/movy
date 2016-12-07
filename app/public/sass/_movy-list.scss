@@ -22,12 +22,15 @@
             background-color: $color-danger;
         }
 
-        .movy-check {
-            @extend .movy-control;
-
+        .movy-controls {
+            display: table;
             position: absolute;
             top: 0;
             left: 0;
+        }
+
+        .movy-check {
+            @extend .movy-control;
 
             background-color: $green;
             visibility: hidden;
@@ -37,10 +40,23 @@
             }
         }
 
-        &:hover {
-            .movy-check {
+        .movy-star {
+            @extend .movy-control;
+
+            background-color: $yellow;
+            visibility: hidden;
+
+            &.movy-active {
                 visibility: visible;
             }
+        }
+
+        &:hover {
+            .movy-check,
+            .movy-star {
+                visibility: visible;
+            }
+
         }
     }
 

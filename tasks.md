@@ -1,7 +1,7 @@
 ## high priority
 
 - [ ] limit search results
-- [ ] add favorite flags
+- [x] add favorite flags
 - [ ] filter checkbox favorite/watched
 
 ## medium priority
