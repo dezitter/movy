@@ -1,7 +1,6 @@
 movy-grid-item(
   movie="movie"
   ng-repeat="movie in ($ctrl.movies \
-  | filter  : { title: $ctrl.filter.title } \
   | orderBy : $ctrl.filter.order.property : $ctrl.filter.order.reverse \
   | limitTo : $ctrl.pager.limit : (($ctrl.pager.current - 1) * $ctrl.pager.limit)) as filteredMovies"
 )

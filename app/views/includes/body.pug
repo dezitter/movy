@@ -1,0 +1,25 @@
+.pure-g
+  .pure-u-3-4
+    .movy-content(ng-controller="movyList")
+      .pure-g
+        .pure-u-3-5
+          movy-filter(
+            movy-filter="store.filter"
+          )
+
+        .pure-u-2-5
+          movy-pager(
+            movy-pager-state="store.pager"
+          )
+
+      .pure-g
+        .pure-u-1
+          .movy-grid
+            movy-grid(
+              movy-movies="movies"
+              movy-filter="store.filter"
+              movy-pager="store.pager"
+            )
+
+  .pure-u-1-4
+    movy-search

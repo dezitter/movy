@@ -1,3 +1,5 @@
+const angular = require('angular');
+
 function StoreFactory() {
 
     class Store {
@@ -12,6 +14,14 @@ function StoreFactory() {
 
             this.resetFilter();
         }
+
+        // {{{ Getters
+
+        getFilter() { return this.filter; }
+        getMovies() { return this.movies; }
+        getPager()  { return this.pager;  }
+
+        // }}}
 
         // {{{ Movie methods
 
@@ -35,7 +45,6 @@ function StoreFactory() {
 
             if (index >= 0) {
                 this.movies.splice(index, 1);
-                this.updatePager();
             }
         }
 
@@ -73,16 +82,15 @@ function StoreFactory() {
         }
 
         updatePager(patch) {
-            const limit = this.pager.limit;
-            const n = this.movies.length;
-            const total = Math.ceil(n / limit);
             var current = this.pager.current;
 
-            if (total < this.pager.current) {
-                current = total;
+            if (angular.isNumber(patch.total)
+            && !angular.isNumber(patch.current)
+            && patch.total < current) {
+                current = patch.total;
             }
 
-            Object.assign(this.pager, { current, total }, patch);
+            Object.assign(this.pager, { current }, patch);
         }
 
         // }}}

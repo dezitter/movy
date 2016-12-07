@@ -11,14 +11,7 @@ html(ng-app="movyApp")
     link(href="/css/main.css" rel="stylesheet")
   body
     include includes/menu.pug
-
-    .pure-g
-      .pure-u-3-4
-        .movy-content
-          movy-list
-
-      .pure-u-1-4
-        movy-search
+    include includes/body.pug
 
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js")

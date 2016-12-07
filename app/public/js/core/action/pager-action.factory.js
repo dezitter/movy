@@ -9,6 +9,10 @@ function PagerActionFactory(Store) {
         previousPage() {
             Store.decCurrentPage();
         }
+
+        updatePager(patch) {
+            Store.updatePager(patch);
+        }
     }
 
     return new PagerAction();
