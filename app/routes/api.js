@@ -50,7 +50,12 @@ router.get('/movies/search', (req, res) => {
 
     tmdb.searchMovie(text)
         .then(response => {
-            const movies = parseResponse(response);
+            var movies;
+
+            movies = parseResponse(response);
+            movies = movies.sort(compareByPopularity);
+            movies = movies.reverse();
+
             res.send(movies);
         });
 
@@ -58,6 +63,16 @@ router.get('/movies/search', (req, res) => {
         return response.results.map(movie => {
             return parseSearchResult(movie, tmdbConfig);
         });
+    }
+
+    function compareByPopularity(movieA, movieB) {
+        if (movieA.popularity < movieB.popularity) {
+            return -1;
+        } else if (movieB.popularity < movieA.popularity) {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 });
 
