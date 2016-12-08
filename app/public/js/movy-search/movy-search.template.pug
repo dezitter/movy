@@ -5,4 +5,14 @@
 
   .pure-g
     .pure-u-1
-      movy-search-result(loading="$ctrl.loading" results="$ctrl.results")
+      movy-search-result(ng-show="$ctrl.results.length > 0" results="$ctrl.results")
+
+  .pure-g(ng-show="!$ctrl.loading && $ctrl.results.length === 0")
+    .pure-u-1
+      .alert-info
+        = "No results."
+
+  .pure-g(ng-show="$ctrl.loading")
+    .pure-u-1
+      .alert-info
+        = "Loading..."
