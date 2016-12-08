@@ -11,8 +11,9 @@ html(ng-app="movyApp")
     link(href="/css/main.css" rel="stylesheet")
   body
     include includes/menu.pug
-    include includes/body.pug
+    div(ng-view)
 
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js")
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js")
     script(type="text/javascript" src="/js/bundle.js")

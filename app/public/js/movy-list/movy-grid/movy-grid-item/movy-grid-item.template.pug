@@ -1,6 +1,7 @@
 .movy-grid-item
   .movy-poster
-    img(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
+    a(href="#details/{{ $ctrl.movie._id }}")
+      img(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
     button.pure-button.movy-remove(type="button" title="Remove" ng-click="$ctrl.onRemove()")
       img(src="/img/icon/ic_delete_white_18dp.png")
 

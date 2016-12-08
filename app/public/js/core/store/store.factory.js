@@ -21,6 +21,10 @@ function StoreFactory() {
         getMovies() { return this.movies; }
         getPager()  { return this.pager;  }
 
+        getMovie(_id) {
+            return this.movies.find(m => m._id === _id);
+        }
+
         // }}}
 
         // {{{ Movie methods

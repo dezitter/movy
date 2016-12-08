@@ -1,14 +1,16 @@
 /* {{{ Colors */
 
+$black-dark: #121212;
+$black-light: #1e1e1e;
 $green: #3c763d;
-$yellow: #8a6d3b;
-$red: #c9302c;
 $grey: #333333;
+$red: #c9302c;
+$yellow: #8a6d3b;
 
 $main-text-color: white;
 
-$main-background-color: #1e1e1e;
-$item-background-color: #121212;
+$main-background-color: $black-light;
+$item-background-color: $black-dark;
 
 $color-success: $green;
 $color-danger: $red;

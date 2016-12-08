@@ -7,6 +7,20 @@ function MovieActionFactory(Store, Movie) {
                 .then(movie => Store.addMovie(movie));
         }
 
+        getMovie(_id) {
+            return new Promise(executor)
+                .catch(onReject);
+
+            function executor(resolve, reject) {
+                const movie = Store.getMovie(_id);
+                movie ? resolve(movie) : reject();
+            }
+
+            function onReject() {
+                return Movie.get({ _id }).$promise;
+            }
+        }
+
         updateMovie(movie, patch) {
             const _id = movie._id;
 

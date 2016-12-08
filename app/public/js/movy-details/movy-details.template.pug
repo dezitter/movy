@@ -1,0 +1,21 @@
+.pure-g
+  .pure-u-1
+    .movy-details
+      .movy-poster
+        img(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
+
+      .movy-infos
+        .movy-info
+          span.movy-label= "Title: "
+          span.movy-title(title="{{ $ctrl.movie.title }}")
+            | {{ $ctrl.movie.title }}
+
+        .movy-info
+          span.movy-label= "Release Date: "
+          span.movy-release-date(title="{{ $ctrl.movie.release_date }}")
+            | {{ $ctrl.movie.release_date }}
+
+        .movy-info
+          span.movy-label= "Overview: "
+          span.movy-overview
+            | {{ $ctrl.movie.overview }}
