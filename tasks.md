@@ -1,7 +1,6 @@
 ## high priority
 
 - [ ] add details page
-- [ ] limit search results
 
 ## medium priority
 
@@ -17,6 +16,8 @@
 
 - [ ] add a standalone script to search for movies on local disk and add to store
 - [ ] blur images ?
+
+- [ ] add user login support
 
 - [ ] make sure all attributes/components/bindigns are prefixed
 - [ ] load .min scripts in 'production' environment
