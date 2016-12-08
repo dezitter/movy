@@ -1,3 +1,7 @@
-.movy-pager span{
-    color: $main-text-color;
+.movy-pager {
+    float: right;
+
+    span {
+        color: $main-text-color;
+    }
 }
