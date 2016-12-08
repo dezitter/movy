@@ -6,11 +6,13 @@
     margin-bottom: $main-margin;
     margin-right: 5px;
     padding: $main-padding;
+    vertical-align: top;
 
-    width: $movy-grid-item-width ;
+    width: $movy-grid-item-width;
 
     .movy-poster {
         position: relative;
+        min-height: $movy-grid-item-poster-min-height;
 
         .movy-remove {
             @extend .movy-control;
