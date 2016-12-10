@@ -49,6 +49,7 @@ router.get('/movies/search', (req, res) => {
     const text = req.query.text;
 
     tmdb.searchMovie(text)
+        .then(response => JSON.parse(response.body))
         .then(response => {
             var movies;
 

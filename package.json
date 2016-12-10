@@ -25,7 +25,7 @@
     "express": "^4.14.0",
     "nedb": "^1.8.0",
     "pug": "^2.0.0-beta6",
-    "tmdb-v3": "^1.0.0"
+    "tmdb-v3": "^2.1.0"
   },
   "devDependencies": {
     "browser-sync": "^2.18.2",
