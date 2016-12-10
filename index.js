@@ -1,7 +1,6 @@
 const debug = require('debug')('movy');
-const dotenv = require('dotenv');
 
-dotenv.config();
+require('./config');
 
 const app = require('./app');
 const APP_PORT = process.env.APP_PORT;
