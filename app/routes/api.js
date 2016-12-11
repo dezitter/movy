@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const parseSearchResult = require('./util/parse-search-result');
+const parseSearchResult = require('../../lib/tmdb/parse-search-result');
 
 router.get('/movies', (req, res) => {
     const store = req.app.get('store');
