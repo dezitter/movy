@@ -7,6 +7,7 @@ const path = require('path');
 const config = require('../config');
 const api = require('./routes/api');
 const index = require('./routes/index');
+const errorMiddleware = require('./middlewares/error');
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.use(express.static( path.join(__dirname, 'public') ));
 
 app.use('/api', api);
 app.use(index);
+app.use(errorMiddleware);
 
 module.exports = app;

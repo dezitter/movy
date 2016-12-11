@@ -10,7 +10,7 @@ function compareByPopularity(movieA, movieB) {
     }
 }
 
-module.exports = function(req, res) {
+module.exports = function(req, res, next) {
     const tmdb = req.app.get('tmdb');
     const tmdbConfig = req.app.get('tmdb.config');
     const text = req.query.text;
@@ -25,7 +25,8 @@ module.exports = function(req, res) {
             movies = movies.reverse();
 
             res.send(movies);
-        });
+        })
+        .catch(next);
 
     function parseResponse(response) {
         return response.results.map(movie => {

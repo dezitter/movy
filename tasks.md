@@ -7,8 +7,8 @@
 ## medium priority
 
 - [ ] improve look & feel
-- [ ] handle route errors
-- [ ] handle Store queries errors
+- [x] handle route errors
+- [x] handle Store queries errors
 
 - [ ] add youtube widget in details to show trailer
 - [ ] add support for collection of related movies
