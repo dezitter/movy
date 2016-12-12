@@ -5,9 +5,9 @@
     ng-disabled="$ctrl.state.current === 1"
   )= "Previous"
 
-  span| {{ $ctrl.state.current }}
-  span= " / "
-  span| {{ $ctrl.state.total }}
+  span| &nbsp; {{ $ctrl.state.current | padFilter }} &nbsp;
+  span= "/"
+  span| &nbsp; {{ $ctrl.state.total   | padFilter }} &nbsp;
 
   button.pure-button(
     type="button"
