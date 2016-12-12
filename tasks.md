@@ -16,7 +16,8 @@
 
 ## low priority
 
-- [ ] add a standalone script to search for movies on local disk and add to store
+- [x] add a standalone script to search for movies on local disk and add to store
+- [ ] use exiftool or similar tool to extract runtime/file size/mime type
 - [ ] blur images ?
 
 - [ ] add user login support
