@@ -67,5 +67,6 @@
     .movy-title,
     .movy-release-date {
         @include text-ellipsis();
+        text-align: center;
     }
 }

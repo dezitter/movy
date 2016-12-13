@@ -2,7 +2,7 @@
 
 - [x] add details page
 - [ ] factorize .movy-infos (movy-grid-item, movy-search-result-item, movy-details)
-- [ ] `text-align:center` has nothing to do in text-ellipsis mixin
+- [x] `text-align:center` has nothing to do in text-ellipsis mixin
 
 ## medium priority
 
