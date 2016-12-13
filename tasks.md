@@ -23,5 +23,6 @@
 - [ ] add user login support
 
 - [ ] make sure all attributes/components/bindigns are prefixed
-- [ ] load .min scripts in 'production' environment
+- [x] load .min scripts in 'production' environment
+- [ ] load .min css in 'production' environment
 - [ ] dump initial movie list in HTML to save request & round-trip

@@ -13,7 +13,8 @@ html(ng-app="movyApp")
     include includes/menu.pug
     div(ng-view)
 
-    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js")
-    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js")
-    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js")
-    script(type="text/javascript" src="/js/bundle.js")
+    - var ext = (env === 'production') ? '.min.js' : '.js';
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular" + ext)
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource" + ext)
+    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route" + ext)
+    script(type="text/javascript" src="/js/bundle" + ext)

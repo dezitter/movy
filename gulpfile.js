@@ -1,3 +1,7 @@
+const gulp = require('gulp');
+
+gulp.task('build', ['min:js']);
+
 require('./gulp/task/build/css');
 require('./gulp/task/build/js');
 
