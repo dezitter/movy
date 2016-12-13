@@ -1,18 +1,36 @@
 const angular = require('angular');
 
-function StoreFactory() {
+function StoreFactory(initialState) {
+
+    function getInitialState() {
+        return {
+            movies: initialState.movies,
+            pager: getInitialPagerState(),
+            filter: getInitialFilterState()
+        };
+    }
+
+    function getInitialPagerState() {
+        return Object.assign({}, initialState.pager, {
+            current: 1,
+            total: 1
+        });
+    }
+
+    function getInitialFilterState() {
+        return {
+            title: '',
+            order: {
+                property: '-createdAt',
+                reverse: false
+            }
+        };
+    }
 
     class Store {
 
         constructor() {
-            this.movies = [];
-            this.pager = {
-                current: 1,
-                total: 1,
-                limit: 10
-            };
-
-            this.resetFilter();
+            Object.assign(this, getInitialState());
         }
 
         // {{{ Getters
@@ -69,13 +87,7 @@ function StoreFactory() {
         }
 
         resetFilter() {
-            this.filter = {
-                title: '',
-                order: {
-                    property: '-createdAt',
-                    reverse: false
-                }
-            };
+            this.filter = getInitialFilterState();
         }
 
         // }}}
@@ -121,5 +133,6 @@ function StoreFactory() {
 }
 
 module.exports = [
+    'initialState',
     StoreFactory
 ];

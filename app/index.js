@@ -17,6 +17,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('tmdb', new Tmdb({ apiKey: process.env.TMDB_API_KEY }));
 app.set('tmdb.config', config.tmdb);
 app.set('store', new Datastore(config.store));
+app.set('movy.config', config.movy);
 
 app.use(compression());
 app.use(bodyParser.json());

@@ -17,4 +17,10 @@ html(ng-app="movyApp")
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular" + ext)
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource" + ext)
     script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route" + ext)
+
+    script.
+      window.MOVY = {
+        initialState: !{JSON.stringify(initialState)}
+      };
+
     script(type="text/javascript" src="/js/bundle" + ext)

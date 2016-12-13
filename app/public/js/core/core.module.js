@@ -12,6 +12,7 @@ const coreModule = angular.module('core', [
 ]);
 
 coreModule
-    .filter('padFilter', PadFilterFactory);
+    .filter('padFilter', PadFilterFactory)
+    .value('initialState', global.MOVY.initialState);
 
 module.exports = coreModule;

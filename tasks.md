@@ -21,8 +21,9 @@
 - [ ] blur images ?
 
 - [ ] add user login support
+- [ ] add a Suggestions page
 
 - [ ] make sure all attributes/components/bindigns are prefixed
 - [x] load .min scripts in 'production' environment
 - [ ] load .min css in 'production' environment
-- [ ] dump initial movie list in HTML to save request & round-trip
+- [x] dump initial movie list in HTML to save request & round-trip
