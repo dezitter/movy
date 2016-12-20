@@ -16,7 +16,7 @@ app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 app.set('tmdb', new Tmdb({ apiKey: process.env.TMDB_API_KEY }));
 app.set('tmdb.config', config.tmdb);
-app.set('store', new Datastore(config.store));
+app.set('movie.store', new Datastore(config.movieStore));
 app.set('movy.config', config.movy);
 
 app.use(compression());

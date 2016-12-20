@@ -1,8 +1,8 @@
 module.exports = function(req, res, next) {
     const _id = req.params._id;
-    const store = req.app.get('store');
+    const movieStore = req.app.get('movie.store');
 
-    store.findOne({ _id}, (err, movieDoc) => {
+    movieStore.findOne({ _id}, (err, movieDoc) => {
         if (err) return next(err);
         res.send(movieDoc);
     });

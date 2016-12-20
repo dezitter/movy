@@ -1,5 +1,5 @@
 module.exports = {
     autoload: true,
-    filename: process.env.STORE_FILENAME,
+    filename: process.env.MOVIE_STORE_FILENAME,
     timestampData: true
 };

@@ -8,6 +8,6 @@ module.exports = {
             limit: 15
         }
     },
-    store: require('./store'),
+    movieStore: require('./movie-store'),
     tmdb: require('./tmdb')
 };

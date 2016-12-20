@@ -3,10 +3,10 @@ const router = express.Router();
 
 router.get('/', (req, res, next) => {
     const env = req.app.get('env');
-    const store = req.app.get('store');
+    const movieStore = req.app.get('movie.store');
     const movyConfig = req.app.get('movy.config');
 
-    store.find(null)
+    movieStore.find(null)
          .sort({ createdAt: -1 })
          .limit(movyConfig.pager.limit)
          .exec((err, movies) => {

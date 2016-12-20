@@ -1,7 +1,7 @@
 module.exports = function(req, res, next) {
-    const store = req.app.get('store');
+    const movieStore = req.app.get('movie.store');
 
-    store.find(null)
+    movieStore.find(null)
          .sort({ createdAt: -1 })
          .exec((err, movies) => {
              if (err) return next(err);
