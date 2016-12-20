@@ -7,9 +7,12 @@
 - [ ] save images locally
  - [ ] update poster urls
 
+- [ ] add cache policies
+ - [ ] revv js & css
+
 ## medium priority
 
-- [ ] [api/add] fetch full movie after send partial response
+- [x] [api/add] fetch full movie after send partial response
 
 - [ ] enable full width view of list, vertical scroll search section
 - [ ] improve look & feel
