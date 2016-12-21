@@ -12,19 +12,28 @@ html(ng-app="movyApp")
   body
     .pure-g
       .pure-u-1
-        form.pure-form.pure-form-stacked.movy-login(action='/login' method="post")
-          label
-            span= "Username"
-            input.movy-username(type="text" name="username" required)
+        .movy-login-body
 
-          label
-            span= "Password"
-            input.movy-password(type="password" name="password" required)
+          .pure-g
+            .pure-u-1
+              form.pure-form.pure-form-stacked.movy-login(action='/login' method="post")
+                label
+                  span= "Username"
+                  input.movy-username(type="text" name="username" required)
 
-          button.pure-button(type="submit")= "Login"
+                label
+                  span= "Password"
+                  input.movy-password(type="password" name="password" required)
 
-          p
-            = "Not account ? "
-            a(href="/signup")= "Signup here"
+                button.pure-button(type="submit")= "Login"
 
-        = message
+                p
+                  = "Not account ? "
+                  a(href="/signup")= "Signup here"
+
+          if error.length > 0
+            .pure-g
+              .pure-u-1
+                .alert-error
+                  p= error
+

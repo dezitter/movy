@@ -4,10 +4,11 @@
  - [x] add a user store
 
 - [ ] [user] set username as unique
+- [ ] [user/signup] flash error message if username taken
 - [x] [user] hash password
 - [x] [user] add a link to singup page on login.pug
 - [x] [user] add login/signup/logout styling
-- [ ] [user] show flash messages as alerts
+- [x] [user] show flash messages as alerts
 - [ ] move to https
 
 - [ ] move to MongoDB/mongoose

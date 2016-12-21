@@ -1,10 +1,22 @@
-.alert-info {
+.alert {
     border: 1px solid;
     border-radius: 5px;
 
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #31708f;
-
     padding: 10px;
+}
+
+.alert-info {
+    @extend .alert;
+
+    color: $alert-info-color;
+    background-color: $alert-info-bg-color;
+    border-color: $alert-info-border-color;
+}
+
+.alert-error {
+    @extend .alert;
+
+    color: $alert-error-color;
+    background-color: $alert-error-bg-color;
+    border-color: $alert-error-border-color;
 }

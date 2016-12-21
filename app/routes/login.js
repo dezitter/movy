@@ -3,9 +3,9 @@ const router = express.Router();
 const authenticate = require('../middlewares/authenticate');
 
 router.get('/login', (req, res) => {
-    res.render('login', {
-        message: req.flash('error')
-    });
+    const error = req.flash('error');
+
+    res.render('login', { error });
 });
 
 router.post('/login', authenticate);

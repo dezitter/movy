@@ -2,11 +2,18 @@
 @import 'mixins';
 
 @import 'base';
+@import 'alert';
 
-.movy-login {
+.movy-login-body {
     @include center($login-form-width, $login-form-height);
 
-    background-color: $login-background-color;
-    border-radius: 5px;
-    padding: 20px;
+    form.movy-login {
+        background-color: $login-background-color;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .alert-error {
+        margin-top: 10px;
+    }
 }
