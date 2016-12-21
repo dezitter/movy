@@ -9,5 +9,6 @@ module.exports = {
         }
     },
     movieStore: require('./movie-store'),
+    userStore: require('./user-store'),
     tmdb: require('./tmdb')
 };

@@ -1,0 +1,24 @@
+doctype html
+html(ng-app="movyApp")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    title= title
+    meta(name="description" content="")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    link(href="https://unpkg.com/purecss@0.6.0/build/pure-min.css" rel="stylesheet")
+    link(href="/css/main.css" rel="stylesheet")
+  body
+    form(action='/login' method="post")
+      label
+        span= "Username"
+        input(type="text" name="username")
+
+      label
+        span= "Password"
+        input(type="password" name="password")
+
+      input(type="submit" value="Login")
+
+    = message

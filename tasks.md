@@ -1,8 +1,12 @@
 ## high priority
 
-- [ ] add user support { login, hash, movie_ids }
- - [ ] add a user store
- - [ ] when adding movie to user, check first if already in DB
+- [x] add user support { login, hash, movie_ids }
+ - [x] add a user store
+
+- [ ] [user] set username as unique
+- [ ] [user] hash password
+- [ ] [user] add login/signup/logout styling
+- [ ] move to https
 
 - [ ] save images locally
  - [ ] update poster urls

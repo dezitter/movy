@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const isAuthenticated = require('../middlewares/is-authenticated');
 
-router.get('/', (req, res, next) => {
+router.get('/', isAuthenticated, (req, res, next) => {
     const env = req.app.get('env');
     const movieStore = req.app.get('movie.store');
     const movyConfig = req.app.get('movy.config');

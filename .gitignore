@@ -1,5 +1,6 @@
 .env
 movie-store.db
+user-store.db
 
 dist/
 node_modules/
