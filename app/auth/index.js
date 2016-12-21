@@ -1,8 +1,9 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
+const bcrypt = require('bcrypt');
 
-function isPasswordValid(user, password) {
-    return user.password === password;
+function isPasswordValid(user, passwordCandidate) {
+    return bcrypt.compareSync(passwordCandidate, user.password);
 }
 
 module.exports = function (userStore) {
@@ -11,7 +12,7 @@ module.exports = function (userStore) {
         userStore.findOne({ username }, (err, user) => {
             if (err) return cb(err);
             if (!user) return cb(null, false);
-            if (!isPasswordValid(user, password))  return cb(null, false);
+            if (isPasswordValid(user, password) === false)  return cb(null, false);
 
             return cb(null, user);
         });

@@ -4,15 +4,25 @@
  - [x] add a user store
 
 - [ ] [user] set username as unique
-- [ ] [user] hash password
+- [x] [user] hash password
+- [ ] [user] add a link to singup page on login.pug
 - [ ] [user] add login/signup/logout styling
+- [ ] [user] show flash messages as alerts
 - [ ] move to https
 
+- [ ] move to MongoDB/mongoose
+- [ ] update README with install instructions
+- [ ] provide scripts to pre-populate user & movies for dev
+- [ ] share Movie objects between user
+  (BUT will need a 3rd MovieState obj for watched/favorite linking User<->Movie)
+
 - [ ] save images locally
- - [ ] update poster urls
+ - [ ] update poster urls once saved
 
 - [ ] add cache policies
  - [ ] revv js & css
+
+- [ ] fix: when looking at a movie & going back to list, current page is lost
 
 ## medium priority
 
