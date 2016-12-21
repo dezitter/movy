@@ -3,8 +3,8 @@
 - [x] add user support { login, hash, movie_ids }
  - [x] add a user store
 
-- [ ] [user] set username as unique
-- [ ] [user/signup] flash error message if username taken
+- [x] [user] set username as unique
+- [x] [user/signup] flash error message if username taken
 - [x] [user] hash password
 - [x] [user] add a link to singup page on login.pug
 - [x] [user] add login/signup/logout styling
@@ -12,10 +12,13 @@
 - [ ] move to https
 
 - [ ] move to MongoDB/mongoose
-- [ ] update README with install instructions
-- [ ] provide scripts to pre-populate user & movies for dev
 - [ ] share Movie objects between user
   (BUT will need a 3rd MovieState obj for watched/favorite linking User<->Movie)
+- [ ] update README with install instructions
+- [ ] [user/signup] ensure min username length
+- [ ] [user/signup] ensure min password length & complexity
+- [ ] [user/login] reset password
+- [ ] provide scripts to pre-populate user & movies for dev
 
 - [ ] save images locally
  - [ ] update poster urls once saved

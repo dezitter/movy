@@ -2,11 +2,18 @@
 @import 'mixins';
 
 @import 'base';
+@import 'alert';
 
-.movy-signup {
+.movy-signup-body {
     @include center($signup-form-width, $signup-form-height);
 
-    background-color: $signup-background-color;
-    border-radius: 5px;
-    padding: 20px;
+    form.movy-signup {
+        background-color: $signup-background-color;
+        border-radius: 5px;
+        padding: 20px;
+    }
+
+    .alert-error {
+        margin-top: 10px;
+    }
 }

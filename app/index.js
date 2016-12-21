@@ -21,6 +21,11 @@ const index = require('./routes/index');
 const errorMiddleware = require('./middlewares/error');
 
 const app = express();
+const userStore = new Datastore(config.userStore);
+
+userStore.ensureIndex({ fieldName: 'username', unique: true }, err => {
+    if (err) throw err;
+});
 
 // app settings
 app.set('view engine', 'pug');
@@ -28,10 +33,10 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('tmdb', new Tmdb({ apiKey: process.env.TMDB_API_KEY }));
 app.set('tmdb.config', config.tmdb);
 app.set('movie.store', new Datastore(config.movieStore));
-app.set('user.store', new Datastore(config.userStore));
+app.set('user.store', userStore);
 app.set('movy.config', config.movy);
 
-passport.use( authStrategy(app.get('user.store')) );
+passport.use(authStrategy(userStore));
 
 app.use(compression());
 app.use(bodyParser.json());
