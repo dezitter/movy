@@ -13,7 +13,9 @@ module.exports = {
     'files': [
         'app/**/*.pug',
         'dist/js/bundle.js',
-        'dist/css/main.css'
+        'dist/css/login.css',
+        'dist/css/main.css',
+        'dist/css/signup.css'
     ],
     'online': false,
     'proxy': appUri,

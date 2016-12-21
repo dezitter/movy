@@ -6,7 +6,7 @@
 - [ ] [user] set username as unique
 - [x] [user] hash password
 - [ ] [user] add a link to singup page on login.pug
-- [ ] [user] add login/signup/logout styling
+- [x] [user] add login/signup/logout styling
 - [ ] [user] show flash messages as alerts
 - [ ] move to https
 

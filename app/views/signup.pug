@@ -8,17 +8,19 @@ html(ng-app="movyApp")
     meta(name="viewport" content="width=device-width, initial-scale=1")
 
     link(href="https://unpkg.com/purecss@0.6.0/build/pure-min.css" rel="stylesheet")
-    link(href="/css/main.css" rel="stylesheet")
+    link(href="/css/signup.css" rel="stylesheet")
   body
-    form(action='/signup' method="post")
-      label
-        span= "Username"
-        input(type="text" name="username")
+    .pure-g
+      .pure-u-1
+        form.pure-form.pure-form-stacked.movy-signup(action='/signup' method="post")
+          label
+            span= "Username"
+            input.movy-username(type="text" name="username" required)
 
-      label
-        span= "Password"
-        input(type="password" name="password")
+          label
+            span= "Password"
+            input.movy-password(type="password" name="password" required)
 
-      input(type="submit" value="Signup")
+          button.pure-button(type="submit")= "Signup"
 
-    = message
+        = message

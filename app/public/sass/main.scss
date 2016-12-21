@@ -3,17 +3,13 @@
 
 @import 'alert';
 
+@import 'base';
 @import 'menu';
 @import 'movy-details';
 @import 'movy-filter';
 @import 'movy-list';
 @import 'movy-pager';
 @import 'movy-search';
-
-html,
-body {
-    background-color: $main-background-color;
-}
 
 .movy-content {
     padding: 20px;

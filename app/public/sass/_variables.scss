@@ -11,6 +11,8 @@ $main-text-color: white;
 
 $main-background-color: $black-light;
 $item-background-color: $black-dark;
+$login-background-color: #f5f5f5;
+$signup-background-color: $login-background-color;
 
 $color-success: $green;
 $color-danger: $red;
@@ -38,4 +40,8 @@ $search-result-height: (
   + $search-result-item-height
 )*8;
 
+$login-form-width: 250px;
+$login-form-height: 200px;
+$signup-form-width: $login-form-width;
+$signup-form-height: $login-form-height;
 /* }}} */
