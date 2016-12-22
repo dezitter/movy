@@ -2,6 +2,7 @@ function MovyListController($scope, $filter, Store, MovieAction, PagerAction) {
     $scope.allMovies = [];
     $scope.movies = [];
     $scope.store = Store;
+    $scope.isFiltering = isFiltering;
 
     activate();
 
@@ -48,6 +49,12 @@ function MovyListController($scope, $filter, Store, MovieAction, PagerAction) {
 
     function getTotalpage() {
         return Math.ceil($scope.movies.length / $scope.store.pager.limit);
+    }
+
+    function isFiltering() {
+        return $scope.store.filter.starred === true
+        ||     $scope.store.filter.watched === true
+        ||     $scope.store.filter.title.length > 0;
     }
 
 }

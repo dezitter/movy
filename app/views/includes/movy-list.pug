@@ -5,3 +5,9 @@
     movy-filter="store.filter"
     movy-pager="store.pager"
   )
+
+.alert-info(ng-show="allMovies.length === 0")
+  = "Your list is empty."
+
+.alert-info(ng-show="isFiltering() && allMovies.length !== 0 && movies.length === 0")
+  = "Nothing found."
