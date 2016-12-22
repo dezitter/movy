@@ -2,25 +2,12 @@
   .pure-u-3-4
     .movy-content(ng-controller="movyList")
       .pure-g
-        .pure-u-4-5
-          movy-filter(
-            movy-filter="store.filter"
-          )
-
-        .pure-u-1-5
-          movy-pager(
-            movy-pager-state="store.pager"
-          )
+        .pure-u-1
+          include movy-tools
 
       .pure-g
         .pure-u-1
-          .movy-grid
-            movy-grid(
-              movy-all-movies="allMovies"
-              movy-movies="movies"
-              movy-filter="store.filter"
-              movy-pager="store.pager"
-            )
+          include movy-list.pug
 
   .pure-u-1-4
     movy-search
