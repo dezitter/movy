@@ -5,7 +5,7 @@ dotenv.config();
 module.exports = {
     movy: {
         pager: {
-            limit: 15
+            limit: 10
         }
     },
     movieStore: require('./movie-store'),

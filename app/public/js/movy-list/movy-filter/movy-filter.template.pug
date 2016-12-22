@@ -1,12 +1,12 @@
 .movy-filter
   .pure-g
-    .pure-u-2-5
+    .pure-u-1-5
       form.pure-form
         input(ng-model="$ctrl.filter.title" type="text" placeholder="Title...")
         button.pure-button.movy-clear(type="button" title="Clear" ng-click="$ctrl.clear()")
           img(src="/img/icon/ic_clear_black_18dp.png")
 
-    .pure-u-2-5
+    .pure-u-1-5
       movy-sort-control(
         movy-filter="$ctrl.filter"
       )
