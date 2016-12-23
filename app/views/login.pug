@@ -5,35 +5,30 @@ html(ng-app="movyApp")
     meta(http-equiv="x-ua-compatible" content="ie=edge")
     title= title
     meta(name="description" content="")
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
-    link(href="https://unpkg.com/purecss@0.6.0/build/pure-min.css" rel="stylesheet")
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css")
     link(href="/css/login.css" rel="stylesheet")
   body
-    .pure-g
-      .pure-u-1
-        .movy-login-body
+    .container
+      .movy-login
+        form(action='/login' method="post")
+          .form-group
+            label
+              span= "Username"
+              input.form-control(type="text" name="username" required)
 
-          .pure-g
-            .pure-u-1
-              form.pure-form.pure-form-stacked.movy-login(action='/login' method="post")
-                label
-                  span= "Username"
-                  input.movy-username(type="text" name="username" required)
+          .form-group
+            label
+              span= "Password"
+              input.form-control(type="password" name="password" required)
 
-                label
-                  span= "Password"
-                  input.movy-password(type="password" name="password" required)
+          button.btn.btn-primary(type="submit")= "Login"
 
-                button.pure-button(type="submit")= "Login"
+        p
+          = "No account ? "
+          a(href="/signup")= "Signup here"
 
-                p
-                  = "No account ? "
-                  a(href="/signup")= "Signup here"
-
-          if error.length > 0
-            .pure-g
-              .pure-u-1
-                .alert-error
-                  p= error
-
+      if error.length > 0
+        .alert.alert-danger
+          p= error

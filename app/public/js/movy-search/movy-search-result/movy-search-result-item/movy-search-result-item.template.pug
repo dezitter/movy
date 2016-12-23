@@ -1,19 +1,21 @@
 .movy-search-result-item
-  .movy-poster
-    img(ng-src="{{ $ctrl.movie.small_poster_url }}" title="{{ $ctrl.movie.title }}")
+  .row
+    .col-md-3
+      img.movy-poster(ng-src="{{ $ctrl.movie.small_poster_url }}" title="{{ $ctrl.movie.title }}")
 
-  .movy-infos
-    .movy-title(title="{{ $ctrl.movie.title }}")
-      | {{ $ctrl.movie.title }}
+    .col-md-7
+      .movy-infos
+        .text-truncate(title="{{ $ctrl.movie.title }}")
+          | {{ $ctrl.movie.title }}
 
-    .movy-release-date(title="{{ $ctrl.movie.release_date }}")
-      | ({{ $ctrl.movie.release_date }})
+        .text-truncate(title="{{ $ctrl.movie.release_date }}")
+          | ({{ $ctrl.movie.release_date }})
 
-
-  button.pure-button.movy-add(
-    type="button"
-    title="Add"
-    ng-click="$ctrl.onAdd()"
-    ng-disabled="{{ $ctrl.isInStore() }}"
-  )
-    img(src="/img/icon/ic_add_circle_white_18dp.png")
+    .col-md-2
+      button.btn.btn-sm.btn-primary.float-xs-right(
+        type="button"
+        title="Add"
+        ng-click="$ctrl.onAdd()"
+        ng-disabled="{{ $ctrl.isInStore() }}"
+      )
+        img(src="/img/icon/ic_add_circle_white_18dp.png")

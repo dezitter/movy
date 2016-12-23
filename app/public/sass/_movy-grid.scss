@@ -1,72 +1,57 @@
 .movy-grid-item {
+    background-color: $black-dark;
+    padding: 20px;
+    margin-bottom: 5px;
+
+    /*margin: 0 $grid-item-margin;*/
+    /*padding: $grid-item-padding;*/
+
     display: inline-block;
     color: $main-text-color;
-    background-color: $item-background-color;
 
-    margin-bottom: $main-margin;
-    margin-right: 5px;
-    padding: $main-padding;
-    vertical-align: top;
-
-    width: $movy-grid-item-width;
-
-    .movy-poster {
+    .movy-poster-container {
+        display: block;
         position: relative;
-        min-height: $movy-grid-item-poster-min-height;
 
-        .movy-remove {
-            @extend .movy-control;
-
-            position: absolute;
+        .movy-control {
             top: 0;
-            right: 0;
-
-            background-color: $color-danger;
-        }
-
-        .movy-controls {
-            display: table;
             position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        .movy-check {
-            @extend .movy-control;
-
-            background-color: $green;
+            border: none;
             visibility: hidden;
-
-            &.movy-active {
-                opacity: 0.7;
-                visibility: visible;
-            }
-        }
-
-        .movy-star {
-            @extend .movy-control;
-
-            background-color: $yellow;
-            visibility: hidden;
-
-            &.movy-active {
-                opacity: 0.7;
-                visibility: visible;
-            }
         }
 
         &:hover {
-            .movy-check,
-            .movy-star {
+            .movy-control {
                 visibility: visible;
             }
-
         }
+
+        .movy-remove {
+            right: 0;
+        }
+
+        .movy-check {
+            left: 0;
+            background-color: $green;
+        }
+
+        .movy-fav {
+            left: 35px;
+            background-color: $yellow;
+        }
+
+        .movy-check,
+        .movy-fav {
+            opacity: 0.5;
+
+            &.movy-active {
+                opacity: 1;
+            }
+        }
+
     }
 
-    .movy-title,
-    .movy-release-date {
-        @include text-ellipsis();
-        text-align: center;
+    .movy-infos {
+        max-width: 185px;
     }
 }

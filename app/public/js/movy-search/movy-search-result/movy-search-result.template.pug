@@ -1,4 +1,4 @@
 .movy-search-results
-  .pure-g(ng-repeat="movie in $ctrl.results")
-    .pure-u-1
+  .row(ng-repeat="movie in $ctrl.results")
+    .col-md-12
       movy-search-result-item(movie="movie")

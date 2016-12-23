@@ -1,19 +1,7 @@
 .movy-filter {
-    margin-bottom: $main-margin;
+    padding: $main-padding 0;
 
-    .movy-clear {
-        @extend .movy-control;
+    label {
+        color: $main-text-color;
     }
-
-    .movy-sort {
-        @extend .movy-control;
-    }
-}
-
-.movy-filter label {
-    color: $main-text-color;
-}
-
-.movy-filter input,select {
-    color: black;
 }

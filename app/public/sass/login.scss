@@ -1,19 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import 'user-form';
 
-@import 'base';
-@import 'alert';
-
-.movy-login-body {
-    @include center($login-form-width, $login-form-height);
-
-    form.movy-login {
-        background-color: $login-background-color;
-        border-radius: 5px;
-        padding: 20px;
-    }
-
-    .alert-error {
-        margin-top: 10px;
-    }
+.movy-login {
+    @extend .movy-user-form;
 }

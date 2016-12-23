@@ -1,19 +1,5 @@
-@import 'variables';
-@import 'mixins';
+@import 'user-form';
 
-@import 'base';
-@import 'alert';
-
-.movy-signup-body {
-    @include center($signup-form-width, $signup-form-height);
-
-    form.movy-signup {
-        background-color: $signup-background-color;
-        border-radius: 5px;
-        padding: 20px;
-    }
-
-    .alert-error {
-        margin-top: 10px;
-    }
+.movy-signup {
+    @extend .movy-user-form;
 }

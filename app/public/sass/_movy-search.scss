@@ -1,53 +1,22 @@
 .movy-search {
-    padding: $main-padding;
-
-	.movy-search-form {
-		margin-bottom: $main-margin;
-
-        .movy-clear {
-            @extend .movy-control;
-        }
-	}
+    padding: $main-padding 0;
+    color: $main-text-color;
 
     .movy-search-results {
-        box-shadow: 0px 0px 20px 5px $grey;
-        height: $search-result-height;
-        overflow-y: scroll;
+        overflow-y: auto;
+        max-height: 800px;
+    }
 
-        .movy-search-result-item {
-            height: $search-result-item-height;
-            padding: $movy-search-result-item-padding-vertical $movy-search-result-item-padding-horizontal;
-            position: relative;
+    .movy-search-result-item {
+        margin: 2px 0;
+        background-color: $black-dark;
 
-            color: $main-text-color;
-            background-color: $item-background-color;
-            border-bottom: $movy-search-result-item-border-size solid $grey;
+        img.movy-poster {
+            height: 100px;
+        }
 
-            .movy-poster {
-                position: relative;
-                display: inline-block;
-
-                img {
-                    height: $search-result-poster-height;
-                }
-            }
-
-            .movy-infos {
-                display: inline-block;
-                padding: 0 5px;
-                position: absolute;
-            }
-
-            .movy-add {
-                background-color: $green;
-                float: right;
-                height: 26px;
-                padding: 3px;
-            }
-
-            &:hover {
-                background-color: $grey;
-            }
+        .movy-infos {
+            padding: 5px 0 0 8px;
         }
     }
 }

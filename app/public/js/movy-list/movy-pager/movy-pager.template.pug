@@ -1,5 +1,5 @@
 .movy-pager
-  button.pure-button(
+  button.btn.btn-secondary(
     type="button"
     ng-click="$ctrl.previousPage()"
     ng-disabled="$ctrl.state.current === 1"
@@ -9,7 +9,7 @@
   span= "/"
   span| &nbsp; {{ $ctrl.state.total   | padFilter }} &nbsp;
 
-  button.pure-button(
+  button.btn.btn-secondary(
     type="button"
     ng-click="$ctrl.nextPage()"
     ng-disabled="$ctrl.state.current === $ctrl.state.total"

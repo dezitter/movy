@@ -1,12 +1,13 @@
-form.pure-form
-  label
-    span= "Sort by: "
-    select(ng-model="$ctrl.filter.order.property")
-      option(value="-createdAt")= "Date added"
-      option(value="title")= "Title"
-      option(value="release_date")= "Release Date"
+form.form-inline
+  .form-group
+    label
+      span= "Sort by: "
+      select.form-control(ng-model="$ctrl.filter.order.property")
+        option(value="-createdAt")= "Date added"
+        option(value="title")= "Title"
+        option(value="release_date")= "Release Date"
 
-    button.pure-button.movy-sort(title="Reverse order" ng-click="$ctrl.filter.order.reverse = !$ctrl.filter.order.reverse")
+    button.btn.btn-secondary(title="Reverse order" ng-click="$ctrl.filter.order.reverse = !$ctrl.filter.order.reverse")
       img(
         src="/img/icon/ic_arrow_upward_black_18dp.png"
         ng-show="$ctrl.filter.order.reverse === true"
@@ -14,4 +15,4 @@ form.pure-form
       img(
         src="/img/icon/ic_arrow_downward_black_18dp.png"
         ng-show="$ctrl.filter.order.reverse === false"
-      )
+        )

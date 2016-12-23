@@ -1,22 +1,24 @@
-.movy-filter
-  .pure-g
-    .pure-u-1-5
-      form.pure-form
-        input(ng-model="$ctrl.filter.title" type="text" placeholder="Title...")
-        button.pure-button.movy-clear(type="button" title="Clear" ng-click="$ctrl.clear()")
+.row
+  .col-md-5.col-sm-12
+    form.form-inline
+      .form-group
+        input.form-control(ng-model="$ctrl.filter.title" type="text" placeholder="Title...")
+      button.btn.btn-secondary(type="button" title="Clear" ng-click="$ctrl.clear()")
           img(src="/img/icon/ic_clear_black_18dp.png")
 
-    .pure-u-1-5
-      movy-sort-control(
-        movy-filter="$ctrl.filter"
-      )
+  .col-md-5.hidden-sm-down
+    movy-sort-control(
+      movy-filter="$ctrl.filter"
+    )
 
-    .pure-u-1-5
-      form.pure-form.pure-form-stacked
-        label
+  .col-md-2.hidden-sm-down
+    form
+      .form-check
+        label.form-check-label
+          input.form-check-input(ng-model="$ctrl.filter.starred" type="checkbox")
           span= "Starred"
-          input(ng-model="$ctrl.filter.starred" type="checkbox")
 
-        label
+      .form-check
+        label.form-check-label
+          input.form-check-input(ng-model="$ctrl.filter.watched" type="checkbox")
           span= "Watched"
-          input(ng-model="$ctrl.filter.watched" type="checkbox")

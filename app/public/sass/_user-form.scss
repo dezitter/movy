@@ -1,0 +1,16 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'base';
+
+.movy-user-form {
+    @include center($user-form-width, $user-form-height);
+
+    background-color: $user-background-color;
+    border-radius: 5px;
+    padding: 20px;
+
+    form {
+        margin-bottom: 10px;
+    }
+}

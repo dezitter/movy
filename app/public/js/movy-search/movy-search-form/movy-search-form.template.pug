@@ -1,4 +1,5 @@
-form.pure-form.movy-search-form(ng-submit="$ctrl.onSubmit({ text: $ctrl.text })")
-  input(ng-model="$ctrl.text" type="text" placeholder="Search title..." ng-required="true")
-  button.pure-button.movy-clear(type="button" title="Clear" ng-click="$ctrl.clear()")
-    img(src="/img/icon/ic_clear_black_18dp.png")
+form.form-inline(ng-submit="$ctrl.onSubmit({ text: $ctrl.text })")
+  .form-group
+    input.form-control(ng-model="$ctrl.text" type="text" placeholder="Search title..." ng-required="true")
+    button.btn.btn-secondary(type="button" title="Clear" ng-click="$ctrl.clear()")
+      img(src="/img/icon/ic_clear_black_18dp.png")

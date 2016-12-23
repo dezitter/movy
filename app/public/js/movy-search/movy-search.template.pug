@@ -1,18 +1,14 @@
 .movy-search
-  .pure-g
-    .pure-u-1
+  .row
+    .col-md-12
       movy-search-form(on-submit="$ctrl.onSubmit(text)" on-clear="$ctrl.onClear()")
 
-  .pure-g
-    .pure-u-1
+  .row
+    .col-md-12
       movy-search-result(ng-show="$ctrl.results.length > 0" results="$ctrl.results")
 
-  .pure-g(ng-show="!$ctrl.loading && $ctrl.results.length === 0")
-    .pure-u-1
-      .alert-info
+      .alert.alert-info(ng-show="!$ctrl.loading && $ctrl.results.length === 0")
         = "No results."
 
-  .pure-g(ng-show="$ctrl.loading")
-    .pure-u-1
-      .alert-info
+      .alert.alert-info(ng-show="$ctrl.loading")
         = "Loading..."

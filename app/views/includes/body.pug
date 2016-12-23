@@ -1,17 +1,17 @@
-.pure-g
-  .pure-u-3-4
-    .movy-content(ng-controller="movyList")
-      .pure-g
-        .pure-u-1
+.row
+  .col-md-9.col-sm-12(ng-controller="movyList")
+    .row
+      .col-md-12
+        .movy-filter
           include movy-tools
 
-      .pure-g
-        .pure-u-1
-          include movy-list.pug
+    .row
+      .col-md-12
+        include movy-list.pug
 
-      .pure-g
-        .pure-u-1
-          include movy-pager
+    .row
+      .col-md-12
+        include movy-pager
 
-  .pure-u-1-4
+  .col-md-3.hidden-sm-down
     movy-search
