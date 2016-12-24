@@ -13,9 +13,9 @@ function compareByPopularity(movieA, movieB) {
 module.exports = function(req, res, next) {
     const tmdb = req.app.get('tmdb');
     const tmdbConfig = req.app.get('tmdb.config');
-    const text = req.query.text;
+    const { text, year } = req.query;
 
-    tmdb.searchMovie(text)
+    tmdb.searchMovie(text, { year })
         .then(response => JSON.parse(response.body))
         .then(response => {
             var movies;

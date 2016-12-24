@@ -12,10 +12,10 @@ function MovySearchController(Movie) {
         updateScope({ results: [], loading: false });
     }
 
-    function onSubmit(text) {
+    function onSubmit(text, year) {
         updateScope({ results: [], loading: true });
 
-        searchMovie(text)
+        searchMovie({ text, year })
             .then(movies => updateScope({ results: movies, loading: false }));
     }
 
@@ -24,8 +24,8 @@ function MovySearchController(Movie) {
         vm.results = patch.results;
     }
 
-    function searchMovie(text) {
-        return Movie.search({ text }).$promise;
+    function searchMovie(options) {
+        return Movie.search(options).$promise;
     }
 }
 

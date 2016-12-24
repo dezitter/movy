@@ -7,6 +7,7 @@ function MovySearchFormController() {
 
     function clear() {
         vm.text = '';
+        vm.year = '';
         vm.onClear();
     }
 }

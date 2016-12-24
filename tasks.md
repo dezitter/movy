@@ -1,6 +1,7 @@
 ## high priority
 
-- [ ] allow to search by title & year
+- [x] allow to search by title & year
+- [ ] clean templates by using includes
 - [ ] move to https
 
 - [ ] move to MongoDB with mongoose

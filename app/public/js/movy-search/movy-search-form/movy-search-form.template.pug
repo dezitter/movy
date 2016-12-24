@@ -1,5 +1,31 @@
-form.form-inline(ng-submit="$ctrl.onSubmit({ text: $ctrl.text })")
-  .form-group
-    input.form-control(ng-model="$ctrl.text" type="text" placeholder="Search title..." ng-required="true")
-    button.btn.btn-secondary(type="button" title="Clear" ng-click="$ctrl.clear()")
-      img(src="/img/icon/ic_clear_black_18dp.png")
+form(
+  name="searchForm"
+  ng-submit="searchForm.$valid && $ctrl.onSubmit({ text: $ctrl.text, year: $ctrl.year })"
+)
+  .form-group.row.no-gutters
+    .col-lg-12.col-xl-4
+      input.form-control(
+        ng-model="$ctrl.text"
+        type="text"
+        placeholder="Search title..."
+        ng-required="true")
+
+    .col-lg-12.col-xl-3
+      input.form-control(
+        ng-model="$ctrl.year"
+        ng-pattern="/^(19|20)[0-9]{2}$/"
+        type="number"
+        name="year"
+        placeholder="Year..."
+      )
+
+    .col-lg-12.col-xl-5
+      button.btn.btn-primary(type="submit" title="Submit")
+        img(src="/img/icon/ic_search_black_18dp.png")
+      button.btn.btn-secondary(type="button" title="Clear" ng-click="$ctrl.clear()")
+        img(src="/img/icon/ic_clear_black_18dp.png")
+
+  .row
+    .col-md-12
+      .alert.alert-danger(ng-show="searchForm.year.$error.pattern")
+        = "The date is invalid"
