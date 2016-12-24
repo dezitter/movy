@@ -14,7 +14,7 @@
           .movy-info(ng-show="$ctrl.movie.genres.length > 0")
             span.movy-label= "Genres: "
             span
-              | {{ $ctrl.formatGenres() }}
+              | {{ $ctrl.movie.genres | joinFilter:'name' }}
 
           .movy-info
             span.movy-label= "Release Date: "
