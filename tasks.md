@@ -1,6 +1,6 @@
 ## high priority
 
-- [ ] fix set min-height on grid items
+- [x] fix set min-height on grid items
 - [x] fix when routing back to list do not fetch again
 
 - [x] allow to search by title & year
@@ -33,6 +33,8 @@
 ## low priority
 
 - [ ] add a Suggestions page
+- [ ] pick only needed attribute when fetching list to reduce response size,
+and fully fetch when going to details
 
 - [ ] make sure all attributes/components/bindigns are prefixed
 - [ ] load .min css in 'production' environment

@@ -1,14 +1,14 @@
 .movy-grid-item
   .movy-poster-container
     a(href="#details/{{ $ctrl.movie._id }}")
-      img(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
+      img.movy-poster(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
 
     button.btn.btn-sm.btn-danger.movy-control.movy-remove(
       title="Remove"
       type="button"
       ng-click="$ctrl.onRemove()"
     )
-      img.movy-poster(src="/img/icon/ic_delete_white_18dp.png")
+      img(src="/img/icon/ic_delete_white_18dp.png")
 
     button.btn.btn-sm.btn-secondary.movy-control.movy-check(
       type="button"

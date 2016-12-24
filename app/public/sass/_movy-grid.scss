@@ -13,6 +13,10 @@
         display: block;
         position: relative;
 
+        img.movy-poster {
+            min-height: 278px;
+        }
+
         .movy-control {
             top: 0;
             position: absolute;
