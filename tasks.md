@@ -1,5 +1,8 @@
 ## high priority
 
+- [ ] fix set min-height on grid items
+- [ ] fix when routing back to list do not fetch again
+
 - [x] allow to search by title & year
 - [ ] clean templates by using includes
 - [ ] move to https

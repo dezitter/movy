@@ -1,5 +1,5 @@
 function MovyListController($scope, $filter, Store, MovieAction, PagerAction) {
-    $scope.allMovies = [];
+    $scope.allMovies = Store.getMovies();
     $scope.movies = [];
     $scope.store = Store;
     $scope.isFiltering = isFiltering;
