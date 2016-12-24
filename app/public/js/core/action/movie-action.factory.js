@@ -6,6 +6,10 @@ function MovieActionFactory(Store, Movie) {
 
     class MovieAction {
 
+        constructor() {
+            this.fetched = false;
+        }
+
         saveMovie(movie) {
             return Movie.save(movie).$promise
                 .then(movie => Store.addMovie(movie))
@@ -36,11 +40,16 @@ function MovieActionFactory(Store, Movie) {
         }
 
         fetchMovies() {
+            if (this.fetched) {
+                return new Promise(resolve => resolve( Store.getMovies() ));
+            }
+
             return Movie.query().$promise
-                .then(onResolve)
+                .then(onResolve.bind(this))
                 .catch(handleError);
 
             function onResolve(movies) {
+                this.fetched = true;
                 Store.resetMovies(movies);
                 return movies;
             }

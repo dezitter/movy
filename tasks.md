@@ -1,7 +1,7 @@
 ## high priority
 
 - [ ] fix set min-height on grid items
-- [ ] fix when routing back to list do not fetch again
+- [x] fix when routing back to list do not fetch again
 
 - [x] allow to search by title & year
 - [ ] clean templates by using includes
@@ -23,7 +23,7 @@
 - [ ] add cache policies
  - [ ] revv js & css
 
-- [ ] fix: when looking at a movie & going back to list, current page is lost
+- [x] fix: when looking at a movie & going back to list, current page is lost
 
 ## medium priority
 
