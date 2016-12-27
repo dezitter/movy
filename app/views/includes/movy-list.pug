@@ -1,9 +1,18 @@
-movy-grid(
-  movy-all-movies="allMovies"
-  movy-movies="movies"
-  movy-filter="store.filter"
-  movy-pager="store.pager"
-)
+div(ng-switch="store.mode")
+  movy-grid(
+    ng-switch-when="grid"
+    movy-all-movies="allMovies"
+    movy-movies="movies"
+    movy-filter="store.filter"
+    movy-pager="store.pager"
+  )
+  movy-table(
+    ng-switch-when="table"
+    movy-all-movies="allMovies"
+    movy-movies="movies"
+    movy-filter="store.filter"
+    movy-pager="store.pager"
+  )
 
 .alert.alert-info(ng-show="allMovies.length === 0")
   = "Your list is empty."

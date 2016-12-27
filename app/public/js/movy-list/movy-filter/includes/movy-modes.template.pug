@@ -1,0 +1,11 @@
+.movy-mode-group.btn-group
+  button.btn.btn-secondary(
+    type="button"
+    ng-click="$ctrl.setMode('grid')"
+    ng-class="{ active: ($ctrl.mode === 'grid') }"
+  )= "Grid"
+  button.btn.btn-secondary(
+    type="button"
+    ng-click="$ctrl.setMode('table')"
+    ng-class="{ active: ($ctrl.mode === 'table') }"
+  )= "Table"

@@ -1,11 +1,14 @@
 .row
-  .col-md-5.col-sm-12
+  .col-xl-4.col-lg-6.col-sm-6
     include includes/movy-form.template.pug
 
-  .col-md-5.hidden-sm-down
+  .col-xl-2.col-lg-6.col-sm-6.hidden-xs-down
+    include includes/movy-modes.template.pug
+
+  .col-xl-4.col-lg-6.hidden-md-down
     movy-sort-control(
       movy-filter="$ctrl.filter"
     )
 
-  .col-md-2.hidden-sm-down
+  .col-xl-2.col-lg-6.hidden-md-down
     include includes/movy-flags.template.pug

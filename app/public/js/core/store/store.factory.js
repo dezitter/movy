@@ -4,6 +4,7 @@ function StoreFactory(initialState) {
 
     function getInitialState() {
         return {
+            mode: 'grid',
             movies: initialState.movies,
             pager: getInitialPagerState(),
             filter: getInitialFilterState()
@@ -41,6 +42,13 @@ function StoreFactory(initialState) {
 
         getMovie(_id) {
             return this.movies.find(m => m._id === _id);
+        }
+
+        // }}}
+        // {{{ Setters
+
+        setMode(mode) {
+            this.mode = mode;
         }
 
         // }}}

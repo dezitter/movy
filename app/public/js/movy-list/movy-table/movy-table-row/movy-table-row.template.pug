@@ -1,0 +1,27 @@
+td
+  a(href="/details/{{ $ctrl.movie._id }}")
+    img.movy-poster(
+      title="{{ $ctrl.movie.title }}"
+      ng-src="{{ $ctrl.movie.small_poster_url }}"
+    )
+
+td
+  .text-truncate(title="{{ $ctrl.movie.title }}")
+    | {{ $ctrl.movie.title }}
+
+td
+  .movy-info(ng-show="$ctrl.movie.genres.length > 0")
+    span
+      | {{ $ctrl.movie.genres | joinFilter:'name' }}
+
+td
+  .text-truncate(title="{{ $ctrl.movie.release_date }}")
+    | ({{ $ctrl.movie.release_date }})
+
+td
+  button.btn.btn-sm.btn-danger.movy-control.movy-remove(
+    type="button"
+    title="Remove"
+    ng-click="$ctrl.onRemove()"
+  )
+    img(src="/img/icon/ic_delete_white_18dp.png")

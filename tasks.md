@@ -8,13 +8,16 @@
 - [x] use layout for index/details/signup/login pages
 - [ ] move to https
 
+- [ ] when CRUD movie, link to current user
+
 - [ ] move to MongoDB with mongoose
 - [ ] update README with install instructions
 - [ ] share Movie objects between users (will need a 3rd MovieState)
 - [ ] [user/signup] ensure min username length
 - [ ] [user/signup] ensure min password length & complexity
 
-- [ ] [user/login] reset password
+- [ ] [user/signup] add email field
+- [ ] [user/login,signup] reset password
 
 - [ ] provide scripts to pre-populate user & movies for dev
 
@@ -28,7 +31,7 @@
 
 ## medium priority
 
-- [ ] add table list view
+- [x] add table list view
 - [ ] add support for collection of related movies
 
 ## low priority

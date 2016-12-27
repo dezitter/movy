@@ -1,0 +1,20 @@
+.movy-table {
+    width: 100%;
+
+    thead {
+        th {
+            background-color: $black-dark;
+            padding: 10px;
+            text-align: center;
+        }
+        border-bottom: 1px solid $black-light;
+    }
+
+    .movy-table-row {
+        td {
+            background-color: $black-dark;
+            padding: 10px;
+            border-bottom: 2px solid $black-light;
+        }
+    }
+}
