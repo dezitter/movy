@@ -1,32 +1,11 @@
-doctype html
-html(ng-app="movyApp")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="x-ua-compatible" content="ie=edge")
-    title= title
-    meta(name="description" content="")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+extends layout.pug
 
-    base(href="/")
+block content
+  include includes/menu.pug
 
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css")
-    link(href="/css/main.css" rel="stylesheet")
-  body
-    include includes/menu.pug
+  .container-fluid
+    .row
+      .col-md-12
+        div(ng-view)
 
-    .container-fluid
-      .row
-        .col-md-12
-          div(ng-view)
-
-    - var ext = (env === 'production') ? '.min.js' : '.js';
-    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular" + ext)
-    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource" + ext)
-    script(type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route" + ext)
-
-    script.
-      window.MOVY = {
-        initialState: !{JSON.stringify(initialState)}
-      };
-
-    script(type="text/javascript" src="/js/bundle" + ext)
+  include includes/scripts.pug

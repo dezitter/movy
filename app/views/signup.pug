@@ -1,34 +1,28 @@
-doctype html
-html(ng-app="movyApp")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="x-ua-compatible" content="ie=edge")
-    title= title
-    meta(name="description" content="")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+extends layout.pug
 
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css")
-    link(href="/css/signup.css" rel="stylesheet")
-  body
-    .container
-      .movy-signup
-        form(action='/signup' method="post")
-          .form-group
-            label
-              span= "Username"
-              input.form-control(type="text" name="username" required)
+block css
+  link(href="/css/signup.css" rel="stylesheet")
 
-          .form-group
-            label
-              span= "Password"
-              input.form-control(type="password" name="password" required)
+block content
+  .container
+    .movy-signup
+      form(action='/signup' method="post")
+        .form-group
+          label
+            span= "Username"
+            input.form-control(type="text" name="username" required)
 
-          button.btn.btn-primary(type="submit")= "Signup"
+        .form-group
+          label
+            span= "Password"
+            input.form-control(type="password" name="password" required)
 
-        p
-          = "Already have an account ? "
-          a(href="/login")= "Login here"
+        button.btn.btn-primary(type="submit")= "Signup"
 
-      if error.length > 0
-        .alert.alert-danger
-          p= error
+      p
+        = "Already have an account ? "
+        a(href="/login")= "Login here"
+
+    if error.length > 0
+      .alert.alert-danger
+        p= error

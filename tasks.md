@@ -5,7 +5,7 @@
 
 - [x] allow to search by title & year
 - [x] clean templates by using includes
-- [ ] use layout for index/details/signup/login pages
+- [x] use layout for index/details/signup/login pages
 - [ ] move to https
 
 - [ ] move to MongoDB with mongoose
