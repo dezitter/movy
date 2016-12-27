@@ -1,7 +1,9 @@
 const BodyTemplate = require('../../views/includes/body.pug');
 const MovyDetailsController = require('./movy-details/movy-details.controller');
 
-function config($routeProvider) {
+function config($locationProvider, $routeProvider) {
+    $locationProvider.html5Mode(true);
+
     $routeProvider
         .when('/details/:_id', {
             controller: MovyDetailsController,
@@ -12,4 +14,8 @@ function config($routeProvider) {
         });
 }
 
-module.exports = ['$routeProvider', config];
+module.exports = [
+    '$locationProvider',
+    '$routeProvider',
+    config
+];

@@ -1,8 +1,8 @@
-#menu.navbar
+#menu.navbar.navbar-dark(bs-active)
   span.navbar-brand= "Movy"
   ul.nav.navbar-nav
     li.nav-item
-      a.nav-link(href="#")= "Movies"
+      a.nav-link(href="/")= "Movies"
 
-  a.float-xs-right(href="/logout")
+  a.float-xs-right(target="_self" href="/logout")
     = "Logout"
