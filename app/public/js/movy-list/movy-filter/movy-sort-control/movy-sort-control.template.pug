@@ -7,7 +7,10 @@ form.form-inline
         option(value="title")= "Title"
         option(value="release_date")= "Release Date"
 
-    button.btn.btn-secondary(title="Reverse order" ng-click="$ctrl.filter.order.reverse = !$ctrl.filter.order.reverse")
+    button.btn.btn-secondary(
+      title="Reverse order"
+      ng-click="$ctrl.filter.order.reverse = !$ctrl.filter.order.reverse"
+    )
       img(
         src="/img/icon/ic_arrow_upward_black_18dp.png"
         ng-show="$ctrl.filter.order.reverse === true"

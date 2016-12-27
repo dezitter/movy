@@ -1,34 +1,5 @@
 .movy-grid-item
   .movy-poster-container
-    a(href="/details/{{ $ctrl.movie._id }}")
-      img.movy-poster(ng-src="{{ $ctrl.movie.poster_url }}" title="{{ $ctrl.movie.title }}")
-
-    button.btn.btn-sm.btn-danger.movy-control.movy-remove(
-      title="Remove"
-      type="button"
-      ng-click="$ctrl.onRemove()"
-    )
-      img(src="/img/icon/ic_delete_white_18dp.png")
-
-    button.btn.btn-sm.btn-secondary.movy-control.movy-check(
-      type="button"
-      title="Watched"
-      ng-class="{ 'movy-active': ($ctrl.movie.watched === true) }"
-      ng-click="$ctrl.onUpdate({ watched: !$ctrl.movie.watched })"
-    )
-      img(src="/img/icon/ic_check_circle_white_18dp.png")
-
-    button.btn.btn-sm.btn-secondary.movy-control.movy-fav(
-      type="button"
-      title="Starred"
-      ng-class="{ 'movy-active': ($ctrl.movie.starred === true) }"
-      ng-click="$ctrl.onUpdate({ starred: !$ctrl.movie.starred })"
-    )
-      img(src="img/icon/ic_star_rate_white_18dp.png")
-
-  .movy-infos
-    .text-xs-center.text-truncate(title="{{ $ctrl.movie.title }}")
-      | {{ $ctrl.movie.title }}
-
-    .text-xs-center.text-truncate(title="{{ $ctrl.movie.release_date }}")
-      | ({{ $ctrl.movie.release_date }})
+    include includes/movy-poster.template.pug
+    include includes/movy-controls.template.pug
+    include includes/movy-infos.template.pug

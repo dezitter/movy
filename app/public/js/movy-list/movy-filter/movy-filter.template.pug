@@ -1,10 +1,6 @@
 .row
   .col-md-5.col-sm-12
-    form.form-inline
-      .form-group
-        input.form-control(ng-model="$ctrl.filter.title" type="text" placeholder="Title...")
-      button.btn.btn-secondary(type="button" title="Clear" ng-click="$ctrl.clear()")
-          img(src="/img/icon/ic_clear_black_18dp.png")
+    include includes/movy-form.template.pug
 
   .col-md-5.hidden-sm-down
     movy-sort-control(
@@ -12,13 +8,4 @@
     )
 
   .col-md-2.hidden-sm-down
-    form
-      .form-check
-        label.form-check-label
-          input.form-check-input(ng-model="$ctrl.filter.starred" type="checkbox")
-          span= "Starred"
-
-      .form-check
-        label.form-check-label
-          input.form-check-input(ng-model="$ctrl.filter.watched" type="checkbox")
-          span= "Watched"
+    include includes/movy-flags.template.pug

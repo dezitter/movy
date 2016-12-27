@@ -1,0 +1,14 @@
+form.form-inline
+  .form-group
+    input.form-control(
+      type="text"
+      placeholder="Title..."
+      ng-model="$ctrl.filter.title"
+    )
+
+  button.btn.btn-secondary(
+    title="Clear"
+    type="button"
+    ng-click="$ctrl.clear()"
+  )
+    img(src="/img/icon/ic_clear_black_18dp.png")

@@ -1,0 +1,16 @@
+form
+  .form-check
+    label.form-check-label
+      input.form-check-input(
+        type="checkbox"
+        ng-model="$ctrl.filter.starred"
+      )
+      span= "Starred"
+
+  .form-check
+    label.form-check-label
+      input.form-check-input(
+        type="checkbox"
+        ng-model="$ctrl.filter.watched"
+      )
+      span= "Watched"

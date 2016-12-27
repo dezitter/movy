@@ -1,15 +1,10 @@
 .movy-search-result-item
   .row
     .col-md-3
-      img.movy-poster(ng-src="{{ $ctrl.movie.small_poster_url }}" title="{{ $ctrl.movie.title }}")
+      include includes/movy-poster.template.pug
 
     .col-md-7
-      .movy-infos
-        .text-truncate(title="{{ $ctrl.movie.title }}")
-          | {{ $ctrl.movie.title }}
-
-        .text-truncate(title="{{ $ctrl.movie.release_date }}")
-          | ({{ $ctrl.movie.release_date }})
+      include includes/movy-infos.template.pug
 
     .col-md-2
       button.btn.btn-sm.btn-primary.float-xs-right(

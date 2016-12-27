@@ -1,0 +1,20 @@
+.movy-infos
+  .movy-info
+    span.movy-label= "Title: "
+    span(title="{{ $ctrl.movie.title }}")
+      | {{ $ctrl.movie.title }}
+
+  .movy-info(ng-show="$ctrl.movie.genres.length > 0")
+    span.movy-label= "Genres: "
+    span
+      | {{ $ctrl.movie.genres | joinFilter:'name' }}
+
+  .movy-info
+    span.movy-label= "Release Date: "
+    span(title="{{ $ctrl.movie.release_date }}")
+      | {{ $ctrl.movie.release_date }}
+
+  .movy-info
+    span.movy-label= "Overview: "
+    div
+      | {{ $ctrl.movie.overview }}

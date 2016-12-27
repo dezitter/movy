@@ -4,24 +4,15 @@ form(
 )
   .form-group.row.no-gutters
     .col-lg-12.col-xl-4
-      input.form-control(
-        ng-model="$ctrl.text"
-        type="text"
-        placeholder="Search title..."
-        ng-required="true")
+      include includes/movy-input-title.template.pug
 
     .col-lg-12.col-xl-3
-      input.form-control(
-        ng-model="$ctrl.year"
-        ng-pattern="/^(19|20)[0-9]{2}$/"
-        type="number"
-        name="year"
-        placeholder="Year..."
-      )
+      include includes/movy-input-year.template.pug
 
     .col-lg-12.col-xl-5
       button.btn.btn-primary(type="submit" title="Submit")
         img(src="/img/icon/ic_search_black_18dp.png")
+
       button.btn.btn-secondary(type="button" title="Clear" ng-click="$ctrl.clear()")
         img(src="/img/icon/ic_clear_black_18dp.png")
 
